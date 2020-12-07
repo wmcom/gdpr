@@ -16,21 +16,21 @@
     <p>Selecione e aceite as suas preferências de monitorização:</p>
     <div class="">
         <label class="">
-            <input type="radio" name="cookie-consent-detail" class="" value="full" checked="checked">
+            <input type="checkbox" name="cookie-consent-detail-marketing" class="cookie-consent-detail" value="marketing">
             <span class="">Marketing (inclui anúncios personalizados)</span>
         </label>
         <p class="">
                     A wemystic e os nossos parceiros de publicidade (incluindo plataformas de redes sociais como a Google, Facebook e Instagram) utilizam a monitorização para fornecer ofertas personalizadas, para que possa usufruir na íntegra da experiência wemystic. Tal inclui enviar-lhe "Mensagens Direcionadas em Plataformas de Publicidade de Terceiros", como descrito no Aviso de Privacidade. Caso não aceite esta monitorização, irá ver anúnios da wemystic noutras plataformas de forma aleatória.
         </p>
         <label class="">
-            <input type="radio" name="cookie-consent-detail" class="" value="functional">
+            <input type="checkbox" name="cookie-consent-detail-measurement" class="cookie-consent-detail" value="measurement">
             <span class="">Funcional (melhorar o site)</span>
         </label>
         <p class="">
                     Utilizamos a monitorização funcional para analisar a forma como o nosso site está a ser utilizado. Estes dados ajudam-nos a descobrir erros e a desenvolver novos designs. Também nos permitem testar a eficácia do nosso site. Além disso, estes cookies fornecem informações para uma análise de publicidade e marketing afiliado.
         </p>
         <label class="">
-            <input type="radio" name="cookie-consent-detail" class="" value="mandatory">
+            <input type="checkbox" name="cookie-consent-detail-functional" class="cookie-consent-detail" value="functional" checked="checked" disabled="disabled">
             <span class="">Necessário (atribuir acesso ao site)</span>
         </label>
         <p class="">
@@ -52,30 +52,39 @@
             <span>Aceitar</span>
     </button>
 </div>
+
 <script>
+var _cookie_consent_full = { 'marketing': true, 'measurement': true, 'functional': true};
 $('.cookies-dialog-switch').on('click', function() {
-        var current_mode = 'full';
+        var current_mode = _cookie_consent_full;
         if (typeof(cookie_consent_current) === 'function') {
             current_mode = cookie_consent_current();
         }
-        $('input[name=cookie-consent-detail]').val([current_mode]);
+
+        current_mode['functional'] = true;
+
+        $('input.cookie-consent-detail').each(function(){
+            $(this).attr("checked", current_mode[this.value] ? "checked" : null);
+        });
         $('.cookies-dialog-main').hide();
         $('.cookies-dialog-detail').show();
 });
 
 $('.cookies-dialog-accept').on('click', function() {
-        console.log('Cookies Accept All');
         if (typeof(cookies_dialog_done) === 'function') {
-            cookies_dialog_done('full');
+            cookies_dialog_done(_cookie_consent_full);
         }
 });
 
 $('.cookies-dialog-accept-detail').on('click', function() {
-        var accept_what = $('input[name=cookie-consent-detail]:checked').val();
-        console.log('Cookies Accept ' + accept_what);
+        var accept_what = {};
+        $('input.cookie-consent-detail:checked').each(function(){
+            accept_what[this.value] = true;
+        });
+
+		accept_what['functional'] = true;
         if (typeof(cookies_dialog_done) === 'function') {
             cookies_dialog_done(accept_what);
         }
 });
 </script>
-
