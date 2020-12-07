@@ -54,6 +54,11 @@
 </div>
 <script>
 $('.cookies-dialog-switch').on('click', function() {
+        var current_mode = 'full';
+        if (typeof(cookie_consent_current) === 'function') {
+            current_mode = cookie_consent_current();
+        }
+        $('input[name=cookie-consent-detail]').val([current_mode]);
         $('.cookies-dialog-main').hide();
         $('.cookies-dialog-detail').show();
 });
@@ -66,7 +71,7 @@ $('.cookies-dialog-accept').on('click', function() {
 });
 
 $('.cookies-dialog-accept-detail').on('click', function() {
-        var accept_what = $("input[name=cookie-consent-detail]:checked").val();
+        var accept_what = $('input[name=cookie-consent-detail]:checked').val();
         console.log('Cookies Accept ' + accept_what);
         if (typeof(cookies_dialog_done) === 'function') {
             cookies_dialog_done(accept_what);
