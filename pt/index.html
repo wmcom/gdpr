@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>WeMystic</title>
+	<meta name="description" content="WeMystic">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  /* @import url(https://fonts.googleapis.com/css?family=Dosis:400,600,700&subset=latin&font-display=swap);
+   */
+  @font-face {
+    font-family: 'Dosis';
+    src: local('Dosis'),
+         url(https://fonts.gstatic.com/s/dosis/v19/HhyaU5sn9vOmLzloC_WoEoZK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'geoph';
+    src: url(/assets/fonts/geoph.eot?qk6t54);
+    src: local('geoph'),
+         url(/assets/fonts/geoph.eot?qk6t54#iefix) format("embedded-opentype"),
+         url(/assets/fonts/geoph.ttf?qk6t54) format("truetype"),
+         url(/assets/fonts/geoph.woff?qk6t54) format("woff"),
+         url(/assets/fonts/geoph.svg?qk6t54#geoph) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
+  body {
+      margin: 0;
+      color: gray;
+      font-size: 16px;
+      line-height: 1.5em;
+  }
+  div {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+      display: block;
+  }
+  .hidden {
+      display: none;
+  }
+  .no-margin {
+      margin: 0;
+  }
+  .no-padding,
+  .block.no-padding {
+      padding: 0;
+  }
+  .no-padding-top {
+      padding-top: 0!important;
+  }
+  .no-padding-bottom {
+      padding-bottom: 0!important;
+  }
+  a {
+      color: #23a0c6;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+      cursor: pointer;
+  }
+  a:visited {
+      color: #386ba9;
+  }
+  .a-close, .a-close:visited, .close-x, .close-x:visited {
+      text-decoration: none;
+      color: #b3b3b3;
+  }
+  img {
+      border-style: none;
+  }
+  b, strong {
+      font-weight: bolder;
+  }
+  h1, h2, h3, h4, h5, h6 {
+      font-family: Dosis,sans-serif;
+      color: #7f6c9d;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.2em;
+      text-transform: uppercase;
+  }
+  .small {
+      max-width: 300px!important;
+  }
+  .align-center,
+  .block.align-center {
+      text-align: center;
+  }
+  hr {
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      border: 0;
+      border-bottom: 1px solid #e6e6e6;
+      margin: 20px 0;
+  }
+  .btn, a.btn, button.btn, html input[type=button].btn, input[type=reset].btn, input[type=submit].btn {
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      min-height: 40px;
+      line-height: 3em;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 0;
+      margin: 5px;
+      padding: 0 10px;
+      font-family: Dosis,sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      cursor: pointer;
+      background: #23a0c6 none no-repeat 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all,.5s,ease;
+      -moz-transition: all,.5s,ease;
+      -ms-transition: all,.5s,ease;
+      -o-transition: all,.5s,ease;
+      transition: all,.5s,ease;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+  }
+  .wrapper .container .block .btn {
+      width: 100%;
+  }
+
+  .wrapper:after, .wrapper:before,
+  ul.inline:after, ul.inline:before,
+  .clearfix:after, .clearfix:before {
+      content: "";
+      display: table;
+  }
+  .wrapper:after,
+  ul.inline:after,
+  .clearfix:after {
+      clear: both;
+  }
+
+  .wrapper {
+      font-size: 0;
+      padding: 20px 0;
+  }
+  .wrapper.header {
+      background: transparent url(/assets/images/header-bg.jpg) no-repeat 0;
+      background-size: cover;
+      background-attachment: fixed;
+  }
+  .wrapper.gray {
+      background: #e6e6e6;
+  }
+  .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 0;
+      text-align: center;
+      padding: 10px;
+  }
+  .block {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      padding: 20px 10px;
+      font-size: 16px;
+      text-align: left;
+  }
+  .s-col-14 {
+      width: 87.5%;
+  }
+  .l-col-10 {
+      width: 62.5%;
+  }
+  .l-col-12 {
+      width: 75%;
+  }
+  .s-col-13 {
+      width: 81.25%;
+  }
+  .s-col-16 {
+      width: 100%;
+  }
+  .logo-header {
+      float: left;
+  }
+  .menu-toggle.burger {
+      color: #fff;
+      float: right;
+      display: block;
+      padding: 10px;
+      font-size: 24px;
+  }
+  [class*=" i-geoph-"], [class^=i-geoph-] {
+      font-family: geoph!important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  .i-geoph-burger-menu:before {
+      content: "\e909";
+  }
+  .i-geoph-close:before {
+      content: "\e90e";
+  }
+  .navigation-container {
+      background: #fff none no-repeat 0;
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100%;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+      -webkit-transition: right,.5s,ease;
+      -moz-transition: right,.5s,ease;
+      -ms-transition: right,.5s,ease;
+      -o-transition: right,.5s,ease;
+      transition: right,.5s,ease;
+  }
+  input#toggleMenu:checked ~ .navigation-container {
+      right: 0;
+  }
+  ul.inline {
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-size: 0;
+  }
+  ul.inline.navigation-list {
+      padding: 0 10px;
+  }
+  ul.inline li {
+      display: inline-block;
+      margin: 0 10px;
+      vertical-align: top;
+      font-size: 16px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  ul.inline li:first-child {
+      margin-top: 15px;
+      margin-right: 3px;
+  }
+  ul.inline.navigation-list li {
+      display: block;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 5px 0;
+  }
+  .wrapper.header .title,
+  .wrapper.header .navigation-container .title {
+      margin: 0 0 10px;
+      padding: 20px 0 0 0;
+      font-size: 1.7em;
+  }
+  .wrapper.header .description,
+  .wrapper.header .title {
+      color: #fff;
+  }
+  .wrapper.header .description {
+      font-size: 21px;
+      font-weight: 300;
+  }
+  .navigation-list .title.small {
+      color: #7f6c9d;
+      font-size: 18px;
+      float: left;
+  }
+  .navigation-list a {
+      text-transform: uppercase;
+      font-family: Dosis,sans-serif;
+      color: gray;
+      font-weight: 400;
+      padding: 10px 0;
+      display: block;
+  }
+  .menu-toggle.close {
+      float: right;
+      font-size: 18px;
+      color: gray;
+      padding: 10px;
+      display: block;
+      margin-top: 10px;
+  }
+  .wrapper.header .cta {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 0;
+  }
+
+  .wrapper.unsubscribe .title {
+      font-size: 24px;
+      color: gray;
+  }
+
+  .footer {
+      font-size: 12px;
+      color: #ccc;
+  }
+
+  .overlay {
+      background: rgba(127,108,157,.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+  }
+  .wrapper.overlay {
+      display: none;
+      padding: 10px;
+  }
+  .wrapper.overlay.show {
+      display: block;
+  }
+
+  .modal {
+      background-color: #fff;
+      padding: 10px;
+  }
+  .modal .header {
+      padding: 10px 15px 0;
+  }
+  .wrapper.overlay .block {
+      padding-bottom: 5px;
+  }
+  .modal-close {
+      float: right;
+      padding: 5px;
+      font-size: 21px;
+  }
+  .wrapper.overlay hr {
+      margin: 10px 0;
+  }
+  .wrapper.overlay .title.small {
+      color: gray;
+      font-size: 21px;
+      margin-top: 0;
+      padding-top: 10px;
+      max-width: 100%!important;
+  }
+
+  @media only screen and (pointer: fine) {
+    .mobile {
+      display: none!important;
+    }
+    .wrapper .container .block .btn {
+      width: auto;
+    }
+    .wrapper .container {
+      padding: 0;
+    }
+    .s-col-16.l-col-12 {
+      width: 75%;
+    }
+    .s-col-16.l-col-10 {
+      width: 62.5%;
+    }
+    .navigation-container {
+      background: transparent;
+      position: static;
+      right: 0;
+      height: auto;
+      float: right;
+      width: auto;
+      box-shadow: none;
+    }
+    ul.inline.navigation-list {
+      padding: 0;
+    }
+    ul.inline.navigation-list li {
+      display: inline-block;
+      border-bottom: none;
+      padding: 0;
+    }
+    .wrapper.header .title {
+      margin: 0;
+      padding: 0;
+      font-size: 36px;
+    }
+    .navigation-list .title.small {
+      color: inherit;
+      font-size: inherit;
+      float: none;
+    }
+    .navigation-list a {
+      color: #fff;
+      padding: 0;
+      display: inline-block;
+    }
+    .wrapper.header .cta {
+      padding: 200px 0;
+    }
+    .wrapper.overlay {
+      padding: 20px 0;
+      font-size: 0;
+    }
+    .wrapper .container {
+      padding: 0;
+    }
+    .wrapper .container .block .btn {
+      width: auto;
+    }
+  }
+  </style>
+</head>
+<body data-load="/pt/data.json">
+
+  <div class="wrapper header">
+    <div class="container">
+      <div class="block no-padding">
+        <a class="logo-header">
+          <img src="/assets/images/logo-header.png" alt="WeMystic">
+        </a>
+
+        <input type="checkbox" name="toggleMenu" id="toggleMenu" class="hidden">
+        <label for="toggleMenu" class="menu-toggle burger mobile"><span class="i-geoph-burger-menu"></span></label>
+
+        <nav class="navigation-container">
+          <ul class="inline navigation-list">
+            <li class="mobile clearfix"><h4 class="title menu-toggle small">Menu</h4><label for="toggleMenu" class="menu-toggle close"><span class="i-geoph-close"></span></label></li>
+            <li><a data-modaltrigger="tc" class="modal-trigger">Termos e Condições</a></li>
+            <li><a data-modaltrigger="contacts" class="modal-trigger">Contactos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="block no-padding s-col-14 cta">
+        <h1 class="title">O WeMystic é um portal de referência no que a conteúdos de horóscopo e tarot diz respeito.</h1>
+        <p class="description">Compartilhamos informação e autoconhecimento. Acreditamos que o conteúdo pode lhe ajudar a ter uma vida mais equilibrada e tranquila.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper gray">
+    <div class="container">
+      <div class="block l-col-10 s-col-16 align-center">
+        <p>Está a receber emails promocionais da nossa marca ou dos nossos parceiros, porque se increveu num dos nossos websites:</p>
+        <div id="lp-links" class="block align-center no-padding-top s-col-13">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper unsubscribe">
+    <div class="container">
+      <div class="block l-col-10 s-col-16 align-center">
+        <h3 class="title">UNSUBSCRIBE</h3>
+        <p>
+        Se quiser cancelar o envio de todos os emails promocionais da nossa marca WeMystic e dos nossos parceiros, envie um email para <a href="mailto:gdpr-rgpd@wemystic.com">gdpr-rgpd@wemystic.com</a>
+        </p>
+      </div>
+      <hr>
+      <div class="block align-center footer">
+        <img src="/assets/images/logo-footer.png" alt="WeMystic">
+        <p class="no-margin">Copyright &copy; WeMystic. Todos os direitos reservados.</p>                
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper overlay" id="modal">
+    <div class="container modal l-col-12 s-col-16">
+      <div class="block no-padding-bottom header">
+        <img class="logo" src="/assets/images/logo-modal.png" alt="WeMystic">
+        <a class="modal-close i-geoph-close a-close"></a>
+        <hr>
+      </div>
+      <div class="block no-padding-top content">
+      </div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('click', function(e) {
+    let el = e.target;
+    if(el.className.indexOf('modal-trigger') !== -1) {
+      e.preventDefault();
+
+      let modalTrigger = el.dataset.modaltrigger;
+      switch (modalTrigger) {
+        case 'contacts':
+          document.querySelectorAll('#modal .content')[0].innerHTML = window.json.contacts.body;
+          break;
+        case 'tc':
+          xhttpCall(window.json.tc.url, function(json) {
+            if(!json) {
+              return;
+            }
+            document.querySelectorAll('#modal .content')[0].innerHTML = json.content;
+          });
+          break;
+      }
+      document.getElementById('modal').classList.add('show');
+      document.body.classList.add('no-scroll');
+    }
+    if(el.className.indexOf('modal-close') !== -1) {
+      e.preventDefault();
+      document.getElementById('modal').classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+
+  function xhttpCall(url, callback) {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState != 4 ||
+          this.status != 200) {
+        return;
+      }
+
+      let result = this.responseText;
+      let json = JSON.parse(result);
+
+      callback(json);
+    };
+
+    try {
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    } catch (err) {}
+  }
+
+  // Page config
+  function upd_lp(json) {
+    let el = document.getElementById('lp-links');
+    if(!el || !json) {
+      return;
+    }
+
+    window.json = json;
+    for (let i=0; i<json.links.length; i++) {
+      let anchor = document.createElement("a");
+      anchor.setAttribute("href", json.links[i].link);
+      anchor.className = "btn";
+      anchor.appendChild(document.createTextNode(json.links[i].label));
+      el.appendChild(anchor);
+    }
+  }
+  window.onload = function() {
+    let url = document.body.getAttribute('data-load');
+    if (!url) {
+      return;
+    }
+
+    xhttpCall(url, upd_lp);
+  }
+  </script>
+</body>
+</html>

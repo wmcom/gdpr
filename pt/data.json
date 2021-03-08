@@ -1,0 +1,18 @@
+{
+  "links": [
+	  {		
+		  "link":  "https://www.wemystic.com.br/",
+		  "label": "wemystic.com.br"
+	  },
+	  {		
+		  "link":  "https://l.wemystic.com.br/pt-consultas-online",
+		  "label": "l.wemystic.com.br"
+	  }
+  ],
+  "tc": {
+    "url": "https://legal.wemystic.net/pt/termsandconditions.json"
+  },
+  "contacts": {
+    "body": "<h2>Contatos</h2><p>Pode entrar em contacto conosco através do email: <a href=\"mailto:info@wemystic.com\">info@wemystic.com</a> ou <a href=\"mailto:info@wemystic.com.br\">info@wemystic.com.br</a>.</p>"
+  }
+}

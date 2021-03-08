@@ -1,0 +1,18 @@
+{
+  "links": [
+	  {		
+		  "link":  "https://www.wemystic.com/es/",
+		  "label": "wemystic.com/es"
+	  },
+	  {		
+		  "link":  "https://l.wemystic.es/es-videncia-online/",
+		  "label": "l.wemystic.es"
+	  }
+  ],
+  "tc": {
+    "url": "https://legal.wemystic.net/es/termsandconditions.json"
+  },
+  "contacts": {
+    "body": "<h2>Contacts</h2><p>You can contact us via email: <a href=\"mailto:info@wemystic.com\">info@wemystic.com</a>.</p>"
+  }
+}
