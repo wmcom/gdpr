@@ -52,3 +52,41 @@
             <span>Aceitar</span>
     </button>
 </div>
+<script>
+function cookies_dialog_open_details() {
+    var current_mode = {};
+    if (typeof(cookie_consent_current) === 'function') {
+        current_mode = cookie_consent_current();
+    }
+
+    current_mode['functional'] = true;
+
+    $('input.cookie-consent-detail').each(function(){
+        $(this).attr("checked", current_mode[this.value] ? "checked" : null);
+    });
+    $('.cookies-dialog-main').hide();
+    $('.cookies-dialog-detail').show();
+}
+
+$('.cookies-dialog-switch').on('click', function() {
+    cookies_dialog_open_details();
+});
+
+$('.cookies-dialog-accept').on('click', function() {
+    if (typeof(cookies_dialog_done) === 'function') {
+        cookies_dialog_done(null);
+    }
+});
+
+$('.cookies-dialog-accept-detail').on('click', function() {
+    var accept_what = {};
+    $('input.cookie-consent-detail:checked').each(function(){
+        accept_what[this.value] = true;
+    });
+
+    accept_what['functional'] = true;
+    if (typeof(cookies_dialog_done) === 'function') {
+        cookies_dialog_done(accept_what);
+    }
+});
+</script>
