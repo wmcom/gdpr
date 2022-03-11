@@ -1,17 +1,17 @@
-<div class="cookies-dialog-main">
+<div class="consent_dialog_main">
   <h4>Consentimento de Cookies</h4>
   <span>
     Os cookies ajudam-nos a oferecer nossos serviços. Ao utilizar nossos serviços, concorda com nossa utilização de cookies.
     <a href="https://legal.wemystic.net/pt/cookiespolicy.html" class="external_policy">Política de Privacidade</a>
   </span>
-  <button type="button" class="cookies-dialog-switch" role="button">
+  <button type="button" class="consent_dialog_switch" role="button">
     <span>Gerir preferências</span>
   </button>
-  <button type="button" class="cookies-dialog-accept" role="button">
+  <button type="button" class="consent_dialog_accept" role="button">
     <span>Aceitar</span>
   </button>
 </div>
-<div class="cookies-dialog-detail" style="display: none;">
+<div class="consent_dialog_detail hidden">
   <h4>Gestão de Cookies</h4>
   <p>Selecione e aceite as suas preferências de monitorização:</p>
   <div>
@@ -54,6 +54,7 @@
 </div>
 <script>
 function cookies_dialog_open_details() {
+  console.log('1');
     var current_mode = {};
     if (typeof(cookie_consent_current) === 'function') {
         current_mode = cookie_consent_current();
@@ -69,18 +70,20 @@ function cookies_dialog_open_details() {
 }
 
 $('.cookies-dialog-switch').on('click', function() {
-  console.log('tmp');
+  console.log('2');
     cookies_dialog_open_details();
 });
 
 $('.cookies-dialog-accept').on('click', function() {
-    if (typeof(cookies_dialog_done) === 'function') {
+  console.log('3');
+  if (typeof(cookies_dialog_done) === 'function') {
         cookies_dialog_done(null);
     }
 });
 
 $('.cookies-dialog-accept-detail').on('click', function() {
-    var accept_what = {};
+  console.log('4');
+  var accept_what = {};
     $('input.cookie-consent-detail:checked').each(function(){
         accept_what[this.value] = true;
     });
