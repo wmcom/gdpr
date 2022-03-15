@@ -176,6 +176,50 @@ div.cookies_policy_minimized a:after {
   .cookies-dialog-main { width: calc(100% - 25px); max-width: initial !important; }
   .cookies_modal > div { padding: 10px !important; font-size: 12px !important; }
   .cookies_modal span { margin-bottom: 10px !important; }
+  div.cookies_policy_minimized a{transform: scale(1.1) !important}
+  .cookies-dialog-main,
+  .cookies_policy_minimized{top: 6px !important; left: initial !important; right: 10px !important;}
+}
+/* extra */
+.cookies-dialog-detail {
+  position: relative;
+}
+.cookies-dialog-detail > h4,
+.cookies-dialog-policy > h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 0 20px;
+  margin-bottom: 30px !important;
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.cookies-dialog-detail > div label,
+.cookies-dialog-policy p > b {
+  margin: 30px 0 20px;
+  display: block;
+  font-size: 15px;
+}
+
+.cookies-dialog-policy ul {
+  padding-left: 30px;
+}
+.cookies-dialog-policy ul li {
+  margin: 10px 0;
+}
+
+.cookies-dialog-close {
+  position: absolute !important;
+  top: 25px !important;
+  right: 25px !important;
+  background-color: transparent !important;
+}
+div.cookies-dialog-close::before,
+div.cookies-dialog-close::after {
+  background-color: #ccc;
+}
+
+.cookies-dialog-accept-detail {
+  margin: 20px 0;
 }
 </style>
 
