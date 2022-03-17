@@ -217,9 +217,17 @@ div.cookies-dialog-close::before,
 div.cookies-dialog-close::after {
   background-color: #ccc;
 }
-
+div.cookies_policy_minimized a::after{top: 0 !important;}
 .cookies-dialog-accept-detail {
   margin: 20px 0;
+}
+
+@media all and (min-width: 768px) {
+  .cookies_policy_minimized{display: block; background-color: #fff; padding: 10px; border-radius: 200px; box-shadow: 0 3px 6px rgba(0,0,0,.1);}
+  .cookies_policy_minimized a{transform: scale(1.2) !important;}
+  .cookies_policy_minimized a,
+  .cookies_policy_minimized a:after,
+  .cookies_policy_minimized a:before{border-color: #e6e6e6 !important;}
 }
 </style>
 
@@ -233,7 +241,7 @@ div.cookies-dialog-close::after {
 <div class="cookies_policy_minimized" style="display: none;"><a>Cookies</a></div>
 
 <script>
-var __udeals_cookie_consent_full = {'marketing': true, 'measurement': true, 'functional': true};
+var __udeals_cookie_consent_full = { 'marketing': true, 'measurement': true, 'functional': true };
 var __udeals_cookie_consent_mode = __udeals_cookie_consent_full;
 var __udeals_cookie_first = true;
 
@@ -284,12 +292,11 @@ function cookies_dialog_open_details() {
     current_mode = cookie_consent_current();
   }
   current_mode['functional'] = true;
-  document.querySelectorAll('input.cookie-consent-detail').forEach(el => el.setAttribute('checked', current_mode[el.value] ? 'checked' : null));
-  /*
+
   $('input.cookie-consent-detail').each(function(){
     $(this).attr("checked", current_mode[this.value] ? "checked" : null);
   });
-  */
+
   document.querySelector('.cookies-dialog-main').style = 'display: none';
   document.querySelector('.cookies-dialog-detail').style = 'display: block';
 }
@@ -312,10 +319,12 @@ function cookies_dialog_done(mode) {
   __udeals_cookie_first = false;
   if (mode === undefined || mode === null)
     mode = __udeals_cookie_consent_full;
-    storeCookieConsent(JSON.stringify(mode), null);
-    __udeals_cookie_consent_mode = mode;
-    cookie_consent_update(mode);
-    document.querySelector('div.cookies_policy_minimized').style = 'display: block';
+
+  storeCookieConsent(JSON.stringify(mode), null);
+  __udeals_cookie_consent_mode = mode;
+  cookie_consent_update(mode);
+ 
+  document.querySelector('div.cookies_policy_minimized').style = 'display: block';
 }
 
 function storeCookieConsent(value, exdays) {
@@ -355,19 +364,14 @@ $(function() {
     cookies_dialog_open_details();
   });
   $(document).on('click', '.cookies-dialog-accept', function() {
-    if (typeof(cookies_dialog_done) === 'function') {
-      cookies_dialog_done(null);
-    }
+    if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(null);
   });
-  $(document).on('click', '.cookies-dialog-accept-detail', function() {
-    var accept_what = {};
-    $('input.cookie-consent-detail:checked').each(function(){
-      accept_what[this.value] = true;
+  $(document).on('click', 'button.cookies-dialog-accept-detail', function() {
+    var udata = { 'marketing': false, 'measurement': false, 'functional': true };
+    $('div.cookies-dialog-detail').find('input.cookie-consent-detail:checked').each(function() {
+      udata[this.value] = true;
     });
-    accept_what['functional'] = true;
-    if (typeof(cookies_dialog_done) === 'function') {
-      cookies_dialog_done(accept_what);
-    }
+    if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(udata);
   });
 
   $(document).on('click', 'div.cookies_policy_minimized a', function(e) {
