@@ -2,8 +2,8 @@
 :root {
   --modal-bg-color: #3c3c3b;
   --modal-txt-color: #fff;
-  --btn-bg-color: rgb(90, 127, 113);
-  --btn-bg-focus: rgb(128, 165, 151);
+  --btn-bg-color: #7fad36;
+  --btn-bg-focus: #93bc42;
   --close-size: 20px;
   --close-color: #fff;
   --close-thickness: 2px;
@@ -19,7 +19,7 @@ div.cookies_modal > div {
   padding: 2em;
   background-color: var(--modal-bg-color);
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--modal-txt-color);
 
   background-color: #fff !important;
@@ -106,31 +106,29 @@ div.cookies_policy_banner button,
   transition: all .2s ease-in-out;
 
   border-radius: 7px;
-  border-color: #b67fb5 !important;
 }
 div.cookies_policy_banner button.cookies-dialog-switch {
   background-color: transparent;
+  border-color: gray !important;
+  color: gray !important;
 }
-.cookies-dialog-switch {
-  color: #b67fb5 !important;
-  border-width: 1px !important;
-}
-.cookies-dialog-switch:hover,
-.cookies-dialog-switch:focus,
-.cookies-dialog-accept:hover,
-.cookies-dialog-accept:focus {
-  background-color: #d398d3 !important;
-  border-color: #d398d3 !important;
+
+div.cookies_policy_banner button.cookies-dialog-switch:hover,
+div.cookies_policy_banner button.cookies-dialog-switch:focus {
+  background-color: gray !important;
+  border-color: gray !important;
   color: #fff !important;
 }
-.cookies-dialog-accept,
-.cookies-dialog-accept-detail{
-  background-color: #b67fb5 !important;
+
+.cookies-dialog-switch {
+  color: var(--btn-bg-color) !important;
+  border-width: 1px !important;
 }
 div.cookies_policy_banner button:hover,
 div.cookies_policy_banner button:focus {
   background-color: var(--btn-bg-focus);
   border-color: var(--btn-bg-focus);
+  color: #fff !important;
 }
 /* Shield based on https://css.gg/shield */
 div.cookies_policy_minimized {
@@ -170,11 +168,13 @@ div.cookies_policy_minimized a:after {
   right: 0;
 }
 
+.cookies_policy_banner.cookies_detail_open{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.8)}
+
 @media all and (max-width: 768px) {
   .cookies-dialog-main,
   .cookies_policy_minimized { bottom: initial !important; top: 10px; }
   .cookies-dialog-main { width: calc(100% - 25px); max-width: initial !important; }
-  .cookies_modal > div { padding: 10px !important; font-size: 12px !important; }
+  .cookies_modal > div { padding: 25px !important; font-size: 12px !important; }
   .cookies_modal span { margin-bottom: 10px !important; }
   div.cookies_policy_minimized a{transform: scale(1.1) !important}
   .cookies-dialog-main,
@@ -184,6 +184,16 @@ div.cookies_policy_minimized a:after {
 .cookies-dialog-detail {
   position: relative;
 }
+
+@media all and (min-width: 768px) {
+  .cookies-dialog-detail {
+
+    max-width: 70%;
+    height: 60vh;
+    margin: auto;
+  }
+}
+
 .cookies-dialog-detail > h4,
 .cookies-dialog-policy > h2 {
   text-transform: uppercase;
@@ -299,6 +309,7 @@ function cookies_dialog_open_details() {
 
   document.querySelector('.cookies-dialog-main').style = 'display: none';
   document.querySelector('.cookies-dialog-detail').style = 'display: block';
+  document.querySelector('.cookies_policy_banner').classList.add('cookies_detail_open');
 }
 
 function cookie_consent_update(mode) {
@@ -323,7 +334,6 @@ function cookies_dialog_done(mode) {
   storeCookieConsent(JSON.stringify(mode), null);
   __udeals_cookie_consent_mode = mode;
   cookie_consent_update(mode);
- 
   document.querySelector('div.cookies_policy_minimized').style = 'display: block';
 }
 
@@ -412,10 +422,12 @@ $(function() {
       policyDiv.style = 'display: block';
     });    
   });
+
   $(document).on('click', '.cookies-dialog-close', function(e) {
     e.preventDefault();
     document.querySelectorAll('div.cookies_modal > div').forEach(el => el.style = 'display: none');
     document.querySelector((__udeals_cookie_first ? 'div.cookies-dialog-main' : 'div.cookies_policy_minimized')).style = 'display: block';
+    document.querySelector('.cookies_policy_banner').classList.remove('cookies_detail_open');
   })
 
 });
