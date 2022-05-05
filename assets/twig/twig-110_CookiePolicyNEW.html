@@ -2,8 +2,8 @@
 :root {
   --modal-bg-color: #3c3c3b;
   --modal-txt-color: #fff;
-  --btn-bg-color: #7fad36;
-  --btn-bg-focus: #93bc42;
+  --btn-bg-color: #7fad36/*rgb(90, 127, 113)*/;
+  --btn-bg-focus: #93bc42/*rgb(128, 165, 151)*/;
   --close-size: 20px;
   --close-color: #fff;
   --close-thickness: 2px;
@@ -15,7 +15,7 @@ div.cookies_policy_banner {
   line-height: 1.2;
 }
 div.cookies_modal > div {
-  position: fixed;  
+  position: fixed;
   padding: 2em;
   background-color: var(--modal-bg-color);
   box-sizing: border-box;
@@ -106,6 +106,7 @@ div.cookies_policy_banner button,
   transition: all .2s ease-in-out;
 
   border-radius: 7px;
+  /*border-color: #b67fb5 !important;*/
 }
 div.cookies_policy_banner button.cookies-dialog-switch {
   background-color: transparent;
@@ -124,6 +125,18 @@ div.cookies_policy_banner button.cookies-dialog-switch:focus {
   color: var(--btn-bg-color) !important;
   border-width: 1px !important;
 }
+/*.cookies-dialog-switch:hover,
+.cookies-dialog-switch:focus,
+.cookies-dialog-accept:hover,
+.cookies-dialog-accept:focus {
+  background-color: #d398d3 !important;
+  border-color: #d398d3 !important;
+  color: #fff !important;
+}*/
+/*.cookies-dialog-accept,
+.cookies-dialog-accept-detail{
+  background-color: #b67fb5 !important;
+}*/
 div.cookies_policy_banner button:hover,
 div.cookies_policy_banner button:focus {
   background-color: var(--btn-bg-focus);
@@ -139,7 +152,7 @@ div.cookies_policy_minimized {
 div.cookies_policy_minimized a {
   display: block;
   width: 14px;
-  height: 18px;  
+  height: 18px;
   box-sizing: border-box;
   cursor: pointer;
   transform: scale(1.5);
@@ -240,22 +253,29 @@ div.cookies_policy_minimized a::after{top: 0 !important;}
   .cookies_policy_minimized a:before{border-color: #e6e6e6 !important;}
 }
 </style>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <div class="cookies_policy_banner" style="display: none;">
   <div class="cookies_modal">
     <span>{{ leadcentre.getInfo.getCookiesPolicy|raw }}</span>
-    <div class="cookies_policy_btn" role="button">OK</div>    
+    <div class="cookies_policy_btn" role="button">OK</div>
     <a href="#" onclick="window.open('{{ leadcentre.getPrivacyPolicyLink | replace({'http:':'https:'}) }}#cookies',null,'width=500,height=400,scrollbars=yes'); return false;">{{ "Learn More" | translate }}</a>
   </div>
 </div>
 <div class="cookies_policy_minimized" style="display: none;"><a>Cookies</a></div>
 
 <script>
-var __udeals_cookie_consent_full = { 'functional': true, 'measurement': true, 'marketing': true };
+var gdprUrl = "https://gdpr-consent-recorder-prod.wemystic.workers.dev"
+if (window.location.origin && window.location.origin.includes('udeals.wmstg.net')) {
+  gdprUrl = "https://gdpr-consent-recorder-stg.wmstg.workers.dev"
+}
+var __udeals_cookie_consent_full = { 'functional': true, 'measurement': false, 'marketing': false };
 var __udeals_cookie_consent_mode = __udeals_cookie_consent_full;
 var __udeals_cookie_first = true;
 
 function cookies_disclosure_load() {
+  // mine-start
+  const lang = 'pt'
+  // mine-end
   var baseUrl = 'https://legal.wemystic.net',
       endUrl;
 
@@ -269,7 +289,7 @@ function cookies_disclosure_load() {
         use_lang = 'en';
 
     if(json && lang && json[lang]) {
-      use_lang = json[lang];  
+      use_lang = json[lang];
     }
     endUrl = baseUrl + '/' + use_lang + '/cookiesdisclosure-new.html';
 
@@ -283,13 +303,13 @@ function cookies_disclosure_load() {
       var cookiesDialogClose = document.createElement('div');
       cookiesDialogClose.className = 'cookies-dialog-close';
       cookiesDialogClose.dataset.anchor = 'cookies-dialog-detail';
-    
+
       document.querySelector('div.cookies_modal').innerHTML = data;
       document.querySelector('div.cookies-dialog-detail').appendChild(cookiesDialogClose);
       document.querySelector('div.cookies_policy_banner').style = 'display: block';
 
       // if not the first time, then go to details
-      if (!__udeals_cookie_first && typeof(cookies_dialog_open_details) === 'function') { 
+      if (!__udeals_cookie_first && typeof(cookies_dialog_open_details) === 'function') {
         cookies_dialog_open_details();
       }
     });
@@ -302,7 +322,6 @@ function cookies_dialog_open_details() {
     current_mode = cookie_consent_current();
   }
   current_mode['functional'] = true;
-
   $('input.cookie-consent-detail').each(function(){
     $(this).attr("checked", current_mode[this.value] ? "checked" : null);
   });
@@ -310,6 +329,9 @@ function cookies_dialog_open_details() {
   document.querySelector('.cookies-dialog-main').style = 'display: none';
   document.querySelector('.cookies-dialog-detail').style = 'display: block';
   document.querySelector('.cookies_policy_banner').classList.add('cookies_detail_open');
+  //element. classList. add('class-1');
+  //to-cf
+  sendToKV('consentShow', 'prefsShow')
 }
 
 function cookie_consent_update(mode) {
@@ -335,6 +357,8 @@ function cookies_dialog_done(mode) {
   __udeals_cookie_consent_mode = mode;
   cookie_consent_update(mode);
   document.querySelector('div.cookies_policy_minimized').style = 'display: block';
+  //to-cf
+  sendToKV('consentShow', 'shieldShow')
 }
 
 function storeCookieConsent(value, exdays) {
@@ -353,6 +377,73 @@ function cookie_consent_current() {
   return __udeals_cookie_consent_mode;
 }
 
+function uGetCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function checkShowedOption() {
+  const banner = document.querySelector('.cookies-dialog-main');
+  const shield = document.querySelector('.cookies_policy_minimized');
+  if (window.getComputedStyle(banner).display != "none") {
+    return 'modal'
+  }
+  if (window.getComputedStyle(shield).display != "none") {
+    return 'shield'
+  }
+}
+
+function sendToKV(eventType, eventTarget) {
+  const udeals = getCookie('udeals');
+  const sessionCookie = getCookie('udeals_variation_uid');
+  const today = new Date();
+  const day = today.toLocaleString('default', { day: 'numeric' });
+  const weekday = today.toLocaleString('default', { weekday: 'short' });
+  const month = today.toLocaleString('default', { month: 'short' });
+  const year = today.toLocaleString('default', { year: 'numeric' });
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  const data = {
+    "key": `${udeals}:${sessionCookie}:${Date.now()}`,
+    "dateTime": `${weekday} ${month} ${day} ${year} ${time}`,
+    "eventType": eventType,
+    "eventTarget": eventTarget
+  }
+  const settings = {
+    "cache": false,
+    "dataType": "JSONP",
+    "jsonpCallback": "callback",
+    "async": true,
+    "crossDomain": true,
+    "url": `${gdprUrl}/gdpr`,
+    "method": "GET",
+    "headers": {
+      "accept": "application/json",
+      "Access-Control-Allow-Origin":"*"
+    },
+    data: data,
+  }
+  $.ajax(settings).done(() => {
+    return true
+  });
+}
+
 $(function() {
   var cookie_v = uGetCookie('udeals_cookies_policy');
   if (cookie_v) {
@@ -363,20 +454,32 @@ $(function() {
       __udeals_cookie_first = false;
       document.querySelector('.cookies_policy_banner').style = 'display: none';
       document.querySelector('.cookies_policy_minimized').style = 'display: block';
+      //to-cf
+      sendToKV('consentShow', 'shieldShow')
     } catch(e) {
+      //to-cf
+      sendToKV('consentShow', 'modalShow')
       cookies_disclosure_load();
     }
   } else {
+    //to-cf
+    sendToKV('consentShow', 'modalShow')
     cookies_disclosure_load();
   }
 
   $(document).on('click', '.cookies-dialog-switch', function() {
+    //to-cf
+    sendToKV('consentClick', 'prefsOpen')
     cookies_dialog_open_details();
   });
   $(document).on('click', '.cookies-dialog-accept', function() {
+    //to-cf
+    sendToKV('consentClick', 'modalAccept')
     if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(null);
   });
   $(document).on('click', 'button.cookies-dialog-accept-detail', function() {
+    //to-cf
+    sendToKV('consentClick', 'prefsAccept')
     var udata = { 'marketing': false, 'measurement': false, 'functional': true };
     $('div.cookies-dialog-detail').find('input.cookie-consent-detail:checked').each(function() {
       udata[this.value] = true;
@@ -385,6 +488,8 @@ $(function() {
   });
 
   $(document).on('click', 'div.cookies_policy_minimized a', function(e) {
+    //to-cf
+    sendToKV('consentClick', 'shieldClick')
     e.preventDefault();
     document.querySelector('div.cookies_policy_minimized').style = 'display: none';
     cookies_disclosure_load();
@@ -420,7 +525,7 @@ $(function() {
       policyDiv.innerHTML = data;
       policyDiv.appendChild(cookiesDialogClose);
       policyDiv.style = 'display: block';
-    });    
+    });
   });
 
   $(document).on('click', '.cookies-dialog-close', function(e) {
@@ -428,7 +533,11 @@ $(function() {
     document.querySelectorAll('div.cookies_modal > div').forEach(el => el.style = 'display: none');
     document.querySelector((__udeals_cookie_first ? 'div.cookies-dialog-main' : 'div.cookies_policy_minimized')).style = 'display: block';
     document.querySelector('.cookies_policy_banner').classList.remove('cookies_detail_open');
+    //to-cf
+    sendToKV('consentClick', 'prefsClose')
+    const optionShown = checkShowedOption()
+    //to-cf
+    sendToKV('consentShow', `${optionShown}Show`)
   })
-
 });
 </script>
