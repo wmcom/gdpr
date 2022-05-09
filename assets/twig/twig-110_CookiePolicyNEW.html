@@ -1,12 +1,15 @@
 <style>
 :root {
-  --modal-bg-color: #3c3c3b;
-  --modal-txt-color: #fff;
+  --modal-bg-color: #ffffff;
+  --modal-txt-color: gray;
   --btn-bg-color: #7fad36;
   --btn-bg-focus: #93bc42;
+  --btn-pref-bg-color: #808080;
+  --btn-pref-bg-color-focus: #808080;
   --close-size: 20px;
   --close-color: #fff;
   --close-thickness: 2px;
+  --badge-color: #e6e6e6;
 }
 div.hidden {
   display: none;
@@ -21,8 +24,6 @@ div.cookies_modal > div {
   box-sizing: border-box;
   font-size: 13px;
   color: var(--modal-txt-color);
-
-  background-color: #fff !important;
   box-shadow: 3px 3px 10px rgba(0,0,0,.1);
   border-radius: 7px;
   color: gray !important;
@@ -47,18 +48,19 @@ div.cookies-dialog-policy {
   overflow: auto;
 }
 div.cookies-dialog-close {
-  position: fixed;
+  position: absolute;
   z-index: 11005;
-  top: 1.5em;
-  right: 1.5em;
+  top: 25px;
+  right: 25px;
   margin: 0;
   padding: 0;
   border: 0;
-  background: var(--modal-bg-color);
+  background: transparent;
   width: var(--close-size);
   height: var(--close-size);
   cursor: pointer;
 }
+
 div.cookies-dialog-close:before,
 div.cookies-dialog-close:after {
   content: '';
@@ -88,7 +90,6 @@ div.cookies-dialog-main h4 {
 div.cookies_policy_banner a {
   text-decoration: underline;
   color: var(--modal-txt-color);
-  color: gray;
 }
 div.cookies_policy_banner label {
   font-weight: 700;
@@ -104,32 +105,30 @@ div.cookies_policy_banner button,
   text-align: center;
   white-space: nowrap;
   transition: all .2s ease-in-out;
-
   border-radius: 7px;
 }
+
 div.cookies_policy_banner button.cookies-dialog-switch {
   background-color: transparent;
-  border-color: gray !important;
-  color: gray !important;
+  border-color: var(--btn-pref-bg-color);
+  color: var(--btn-pref-bg-color);
+  border-width: 1px;
 }
 
-div.cookies_policy_banner button.cookies-dialog-switch:hover,
-div.cookies_policy_banner button.cookies-dialog-switch:focus {
-  background-color: gray !important;
-  border-color: gray !important;
-  color: #fff !important;
-}
-
-.cookies-dialog-switch {
-  color: var(--btn-bg-color) !important;
-  border-width: 1px !important;
-}
 div.cookies_policy_banner button:hover,
 div.cookies_policy_banner button:focus {
   background-color: var(--btn-bg-focus);
   border-color: var(--btn-bg-focus);
-  color: #fff !important;
+  color: #fff;
 }
+
+div.cookies_policy_banner button.cookies-dialog-switch:hover,
+div.cookies_policy_banner button.cookies-dialog-switch:focus {
+  background-color: var(--btn-pref-bg-color);
+  border-color: var(--btn-pref-bg-color-focus);
+}
+
+
 /* Shield based on https://css.gg/shield */
 div.cookies_policy_minimized {
   position: fixed;
@@ -168,61 +167,44 @@ div.cookies_policy_minimized a:after {
   right: 0;
 }
 
-.cookies_policy_banner.cookies_detail_open{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.8)}
-
-@media all and (max-width: 768px) {
-  .cookies-dialog-main,
-  .cookies_policy_minimized { bottom: initial !important; top: 10px; }
-  .cookies-dialog-main { width: calc(100% - 25px); max-width: initial !important; }
-  .cookies_modal > div { padding: 25px !important; font-size: 12px !important; }
-  .cookies_modal span { margin-bottom: 10px !important; }
-  div.cookies_policy_minimized a{transform: scale(1.1) !important}
-  .cookies-dialog-main,
-  .cookies_policy_minimized{top: 6px !important; left: initial !important; right: 10px !important;}
+div.cookies_policy_banner.cookies_detail_open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
 }
+
 /* extra */
-.cookies-dialog-detail {
+div.cookies-dialog-detail {
   position: relative;
 }
 
-@media all and (min-width: 768px) {
-  .cookies-dialog-detail {
-
-    max-width: 70%;
-    height: 60vh;
-    margin: auto;
-  }
-}
-
-.cookies-dialog-detail > h4,
-.cookies-dialog-policy > h2 {
+div.cookies-dialog-detail > h4,
+div.cookies-dialog-policy > h2 {
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   padding: 0 0 20px;
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
   margin-top: 0;
   font-size: 1.2em;
 }
-.cookies-dialog-detail > div label,
-.cookies-dialog-policy p > b {
+div.cookies-dialog-detail > div label,
+div.cookies-dialog-policy p > b {
   margin: 30px 0 20px;
   display: block;
   font-size: 15px;
 }
 
-.cookies-dialog-policy ul {
+div.cookies-dialog-policy ul {
   padding-left: 30px;
 }
-.cookies-dialog-policy ul li {
+div.cookies-dialog-policy ul li {
   margin: 10px 0;
 }
 
-.cookies-dialog-close {
-  position: absolute !important;
-  top: 25px !important;
-  right: 25px !important;
-  background-color: transparent !important;
-}
+
 div.cookies-dialog-close::before,
 div.cookies-dialog-close::after {
   background-color: #ccc;
@@ -233,12 +215,26 @@ div.cookies_policy_minimized a::after{top: 0 !important;}
 }
 
 @media all and (min-width: 768px) {
-  .cookies_policy_minimized{display: block; background-color: #fff; padding: 10px; border-radius: 200px; box-shadow: 0 3px 6px rgba(0,0,0,.1);}
-  .cookies_policy_minimized a{transform: scale(1.2) !important;}
-  .cookies_policy_minimized a,
-  .cookies_policy_minimized a:after,
-  .cookies_policy_minimized a:before{border-color: #e6e6e6 !important;}
+  div.cookies-dialog-detail {max-width: 70%; height: 60vh; margin: auto;}
+  div.cookies_policy_minimized{display: block; background-color: #fff; padding: 10px; border-radius: 200px; box-shadow: 0 3px 6px rgba(0,0,0,.1);}
+  div.cookies_policy_minimized a{transform: scale(1.2);}
+  div.cookies_policy_minimized a,
+  div.cookies_policy_minimized a:after,
+  div.cookies_policy_minimized a:before{border-color: var(--badge-color);}
 }
+
+@media all and (max-width: 768px) {
+  div.cookies-dialog-main,
+  div.cookies_policy_minimized {bottom:initial; top: 10px; }
+  div.cookies-dialog-main { width: calc(100% - 25px); max-width: initial; }
+  div.cookies_modal > div { padding: 25px; font-size: 12px; }
+  div.cookies_modal span { margin-bottom: 10px; }
+  div.cookies_policy_minimized a{transform: scale(1.1);}
+  div.cookies-dialog-main,
+  div.cookies_policy_minimized{top: 6px; left: initial; right: 10px;}
+}
+
+div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 </style>
 
 <div class="cookies_policy_banner" style="display: none;">
