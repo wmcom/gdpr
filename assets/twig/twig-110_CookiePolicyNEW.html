@@ -450,7 +450,7 @@ $(function() {
       sendToKV('consentClick', 'prefsOpen');
     });
   });
-  $(document).on('click', '.cookies-dialog-accept', function() {
+  $(document).on('click', 'button.cookies-dialog-accept', function() {
     //to-cf
     var udata = { 'functional': true, 'measurement': true, 'marketing': true };
     if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(udata);
