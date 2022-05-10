@@ -265,11 +265,11 @@ function cookies_disclosure_load() {
     crossDomain: true,
     cache: false
   }).done(function(data) {
-    var json = JSON.parse(data),
-        use_lang = 'en';
+    var json = JSON.parse(data);
+    var use_lang = lang || 'en';
 
-    if(json && lang && json[lang]) {
-      use_lang = json[lang];
+    if(json && json[use_lang]) {
+      use_lang = json[use_lang];
     }
     endUrl = baseUrl + '/' + use_lang + '/cookiesdisclosure-new.html';
 
