@@ -311,7 +311,9 @@ function cookies_dialog_open_details() {
   document.querySelector('.cookies_policy_banner').classList.add('cookies_detail_open');
   //element. classList. add('class-1');
   //to-cf
-  sendToKV('consentShow', 'prefsShow')
+  var kvSent = new Promise(() => {
+    sendToKV('consentShow', 'prefsShow');
+  });
 }
 
 function cookie_consent_update(mode) {
@@ -338,7 +340,9 @@ function cookies_dialog_done(mode) {
   cookie_consent_update(mode);
   document.querySelector('div.cookies_policy_minimized').style = 'display: block';
   //to-cf
-  sendToKV('consentShow', 'shieldShow')
+  var kvSent = new Promise(() => {
+    sendToKV('consentShow', 'shieldShow');
+  });
 }
 
 function storeCookieConsent(value, exdays) {
@@ -439,7 +443,7 @@ $(function() {
     });
   }
 
-  $(document).on('click', '.cookies-dialog-switch', function() {
+  $(document).on('click', 'button.cookies-dialog-switch', function() {
     //to-cf
     cookies_dialog_open_details();
     var kvSent = new Promise(() => {
