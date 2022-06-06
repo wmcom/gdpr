@@ -18,7 +18,7 @@ div.cookies_policy_banner {
   line-height: 1.2;
 }
 div.cookies_modal > div {
-  position: fixed;  
+  position: fixed;
   padding: 2em;
   background-color: var(--modal-bg-color);
   box-sizing: border-box;
@@ -138,7 +138,7 @@ div.cookies_policy_minimized {
 div.cookies_policy_minimized a {
   display: block;
   width: 14px;
-  height: 18px;  
+  height: 18px;
   box-sizing: border-box;
   cursor: pointer;
   transform: scale(1.5);
@@ -240,7 +240,7 @@ div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 <div class="cookies_policy_banner" style="display: none;">
   <div class="cookies_modal">
     <span>{{ leadcentre.getInfo.getCookiesPolicy|raw }}</span>
-    <div class="cookies_policy_btn" role="button">OK</div>    
+    <div class="cookies_policy_btn" role="button">OK</div>
     <a href="#" onclick="window.open('{{ leadcentre.getPrivacyPolicyLink | replace({'http:':'https:'}) }}#cookies',null,'width=500,height=400,scrollbars=yes'); return false;">{{ "Learn More" | translate }}</a>
   </div>
 </div>
@@ -281,13 +281,13 @@ function cookies_disclosure_load() {
       var cookiesDialogClose = document.createElement('div');
       cookiesDialogClose.className = 'cookies-dialog-close';
       cookiesDialogClose.dataset.anchor = 'cookies-dialog-detail';
-    
+
       document.querySelector('div.cookies_modal').innerHTML = data;
       document.querySelector('div.cookies-dialog-detail').appendChild(cookiesDialogClose);
       document.querySelector('div.cookies_policy_banner').style = 'display: block';
 
       // if not the first time, then go to details
-      if (!__udeals_cookie_first && typeof(cookies_dialog_open_details) === 'function') { 
+      if (!__udeals_cookie_first && typeof(cookies_dialog_open_details) === 'function') {
         cookies_dialog_open_details();
       }
     });
@@ -300,9 +300,8 @@ function cookies_dialog_open_details() {
     current_mode = cookie_consent_current();
   }
   current_mode['functional'] = true;
-
   $('input.cookie-consent-detail').each(function(){
-    $(this).attr("checked", current_mode[this.value] ? "checked" : null);
+    $(this).attr('checked', current_mode[this.value] ? 'checked' : null);
   });
 
   document.querySelector('.cookies-dialog-main').style = 'display: none';
@@ -418,7 +417,7 @@ $(function() {
       policyDiv.innerHTML = data;
       policyDiv.appendChild(cookiesDialogClose);
       policyDiv.style = 'display: block';
-    });    
+    });
   });
 
   $(document).on('click', '.cookies-dialog-close', function(e) {
@@ -427,6 +426,5 @@ $(function() {
     document.querySelector((__udeals_cookie_first ? 'div.cookies-dialog-main' : 'div.cookies_policy_minimized')).style = 'display: block';
     document.querySelector('.cookies_policy_banner').classList.remove('cookies_detail_open');
   })
-
 });
 </script>
