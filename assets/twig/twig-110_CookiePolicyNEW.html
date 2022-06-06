@@ -262,11 +262,13 @@ function cookies_disclosure_load() {
     cache: false
   }).done(function(data) {
     var json = JSON.parse(data),
-        use_lang = 'en';
+        use_lang = 'en',
+        available_lang = ['de', 'en', 'es', 'fr', 'it', 'pt'],
+        variation_lang = '{{ landing.Lang }}';
 
-    if(json && lang && json[lang]) {
-      use_lang = json[lang];  
-    }
+    if(json && lang && json[lang]) use_lang = json[lang];
+    if(variation_lang !== '' && variation_lang !== use_lang && available_lang.includes(variation_lang) === true) use_lang = variation_lang;
+
     endUrl = baseUrl + '/' + use_lang + '/cookiesdisclosure-new.html';
 
     $.ajax({
