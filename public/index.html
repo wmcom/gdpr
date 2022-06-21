@@ -1,15 +1,16 @@
-<?php
- header("Access-Control-Allow-Origin: *");
-?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
 :root {
-  --modal-bg-color: #3c3c3b;
-  --modal-txt-color: #fff;
-  --btn-bg-color: #7fad36/*rgb(90, 127, 113)*/;
-  --btn-bg-focus: #93bc42/*rgb(128, 165, 151)*/;
+  --modal-bg-color: #ffffff;
+  --modal-txt-color: gray;
+  --btn-bg-color: #7fad36;
+  --btn-bg-focus: #93bc42;
+  --btn-pref-bg-color: #808080;
+  --btn-pref-bg-color-focus: #808080;
   --close-size: 20px;
   --close-color: #fff;
   --close-thickness: 2px;
+  --badge-color: #e6e6e6;
 }
 div.hidden {
   display: none;
@@ -24,8 +25,6 @@ div.cookies_modal > div {
   box-sizing: border-box;
   font-size: 13px;
   color: var(--modal-txt-color);
-
-  background-color: #fff !important;
   box-shadow: 3px 3px 10px rgba(0,0,0,.1);
   border-radius: 7px;
   color: gray !important;
@@ -50,18 +49,19 @@ div.cookies-dialog-policy {
   overflow: auto;
 }
 div.cookies-dialog-close {
-  position: fixed;
+  position: absolute;
   z-index: 11005;
-  top: 1.5em;
-  right: 1.5em;
+  top: 25px;
+  right: 25px;
   margin: 0;
   padding: 0;
   border: 0;
-  background: var(--modal-bg-color);
+  background: transparent;
   width: var(--close-size);
   height: var(--close-size);
   cursor: pointer;
 }
+
 div.cookies-dialog-close:before,
 div.cookies-dialog-close:after {
   content: '';
@@ -91,7 +91,6 @@ div.cookies-dialog-main h4 {
 div.cookies_policy_banner a {
   text-decoration: underline;
   color: var(--modal-txt-color);
-  color: gray;
 }
 div.cookies_policy_banner label {
   font-weight: 700;
@@ -107,45 +106,31 @@ div.cookies_policy_banner button,
   text-align: center;
   white-space: nowrap;
   transition: all .2s ease-in-out;
-
   border-radius: 7px;
   /*border-color: #b67fb5 !important;*/
 }
+
 div.cookies_policy_banner button.cookies-dialog-switch {
   background-color: transparent;
-  border-color: gray !important;
-  color: gray !important;
+  border-color: var(--btn-pref-bg-color);
+  color: var(--btn-pref-bg-color);
+  border-width: 1px;
 }
 
-div.cookies_policy_banner button.cookies-dialog-switch:hover,
-div.cookies_policy_banner button.cookies-dialog-switch:focus {
-  background-color: gray !important;
-  border-color: gray !important;
-  color: #fff !important;
-}
-
-.cookies-dialog-switch {
-  color: var(--btn-bg-color) !important;
-  border-width: 1px !important;
-}
-/*.cookies-dialog-switch:hover,
-.cookies-dialog-switch:focus,
-.cookies-dialog-accept:hover,
-.cookies-dialog-accept:focus {
-  background-color: #d398d3 !important;
-  border-color: #d398d3 !important;
-  color: #fff !important;
-}*/
-/*.cookies-dialog-accept,
-.cookies-dialog-accept-detail{
-  background-color: #b67fb5 !important;
-}*/
 div.cookies_policy_banner button:hover,
 div.cookies_policy_banner button:focus {
   background-color: var(--btn-bg-focus);
   border-color: var(--btn-bg-focus);
-  color: #fff !important;
+  color: #fff;
 }
+
+div.cookies_policy_banner button.cookies-dialog-switch:hover,
+div.cookies_policy_banner button.cookies-dialog-switch:focus {
+  background-color: var(--btn-pref-bg-color);
+  border-color: var(--btn-pref-bg-color-focus);
+}
+
+
 /* Shield based on https://css.gg/shield */
 div.cookies_policy_minimized {
   position: fixed;
@@ -184,61 +169,44 @@ div.cookies_policy_minimized a:after {
   right: 0;
 }
 
-.cookies_policy_banner.cookies_detail_open{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.8)}
-
-@media all and (max-width: 768px) {
-  .cookies-dialog-main,
-  .cookies_policy_minimized { bottom: initial !important; top: 10px; }
-  .cookies-dialog-main { width: calc(100% - 25px); max-width: initial !important; }
-  .cookies_modal > div { padding: 25px !important; font-size: 12px !important; }
-  .cookies_modal span { margin-bottom: 10px !important; }
-  div.cookies_policy_minimized a{transform: scale(1.1) !important}
-  .cookies-dialog-main,
-  .cookies_policy_minimized{top: 6px !important; left: initial !important; right: 10px !important;}
+div.cookies_policy_banner.cookies_detail_open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
 }
+
 /* extra */
-.cookies-dialog-detail {
+div.cookies-dialog-detail {
   position: relative;
 }
 
-@media all and (min-width: 768px) {
-  .cookies-dialog-detail {
-
-    max-width: 70%;
-    height: 60vh;
-    margin: auto;
-  }
-}
-
-.cookies-dialog-detail > h4,
-.cookies-dialog-policy > h2 {
+div.cookies-dialog-detail > h4,
+div.cookies-dialog-policy > h2 {
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   padding: 0 0 20px;
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
   margin-top: 0;
   font-size: 1.2em;
 }
-.cookies-dialog-detail > div label,
-.cookies-dialog-policy p > b {
+div.cookies-dialog-detail > div label,
+div.cookies-dialog-policy p > b {
   margin: 30px 0 20px;
   display: block;
   font-size: 15px;
 }
 
-.cookies-dialog-policy ul {
+div.cookies-dialog-policy ul {
   padding-left: 30px;
 }
-.cookies-dialog-policy ul li {
+div.cookies-dialog-policy ul li {
   margin: 10px 0;
 }
 
-.cookies-dialog-close {
-  position: absolute !important;
-  top: 25px !important;
-  right: 25px !important;
-  background-color: transparent !important;
-}
+
 div.cookies-dialog-close::before,
 div.cookies-dialog-close::after {
   background-color: #ccc;
@@ -249,14 +217,27 @@ div.cookies_policy_minimized a::after{top: 0 !important;}
 }
 
 @media all and (min-width: 768px) {
-  .cookies_policy_minimized{display: block; background-color: #fff; padding: 10px; border-radius: 200px; box-shadow: 0 3px 6px rgba(0,0,0,.1);}
-  .cookies_policy_minimized a{transform: scale(1.2) !important;}
-  .cookies_policy_minimized a,
-  .cookies_policy_minimized a:after,
-  .cookies_policy_minimized a:before{border-color: #e6e6e6 !important;}
+  div.cookies-dialog-detail {max-width: 70%; height: 60vh; margin: auto;}
+  div.cookies_policy_minimized{display: block; background-color: #fff; padding: 10px; border-radius: 200px; box-shadow: 0 3px 6px rgba(0,0,0,.1);}
+  div.cookies_policy_minimized a{transform: scale(1.2);}
+  div.cookies_policy_minimized a,
+  div.cookies_policy_minimized a:after,
+  div.cookies_policy_minimized a:before{border-color: var(--badge-color);}
 }
+
+@media all and (max-width: 768px) {
+  div.cookies-dialog-main,
+  div.cookies_policy_minimized {bottom:initial; top: 10px; }
+  div.cookies-dialog-main { width: calc(100% - 25px); max-width: initial; }
+  div.cookies_modal > div { padding: 25px; font-size: 12px; }
+  div.cookies_modal span { margin-bottom: 10px; }
+  div.cookies_policy_minimized a{transform: scale(1.1);}
+  div.cookies-dialog-main,
+  div.cookies_policy_minimized{top: 6px; left: initial; right: 10px;}
+}
+
+div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <div class="cookies_policy_banner" style="display: none;">
   <div class="cookies_modal">
     <span>{{ leadcentre.getInfo.getCookiesPolicy|raw }}</span>
@@ -267,16 +248,29 @@ div.cookies_policy_minimized a::after{top: 0 !important;}
 <div class="cookies_policy_minimized" style="display: none;"><a>Cookies</a></div>
 
 <script>
-var __udeals_cookie_consent_full = { 'marketing': true, 'measurement': true, 'functional': true };
+var l = window.location;
+var gdprUrl = 'https://gdpr-consent-recorder-%s.wemystic.workers.dev'.replace('%s',(l.origin?.includes('wmstg') ? 'stg' : 'prod'));
+var __udeals_cookie_consent_full = { 'functional': true, 'measurement': false, 'marketing': false };
 var __udeals_cookie_consent_mode = __udeals_cookie_consent_full;
 var __udeals_cookie_first = true;
+var udeals = getCookie('udeals');
+var sessionCookie = getCookie('udeals_variation_uid');
+var gdprRecorder = getCookie('gdpr_recorder');
+if (!gdprRecorder) {
+  setGdprCookie()
+}
+
+function setGdprCookie() {
+  const expirationDate = new Date();
+  expirationDate.setMinutes(expirationDate.getMinutes() + 30);
+  document.cookie = `gdpr_recorder=${udeals}:${Date.now()}; expires=${expirationDate.toUTCString()}`;
+  gdprRecorder = getCookie('gdpr_recorder');
+}
 
 function cookies_disclosure_load() {
-  // mine-start
-  const lang = 'pt'
-  // mine-end
   var baseUrl = 'https://legal.wemystic.net',
       endUrl;
+  var lang = 'en'
 
   $.ajax({
     url: baseUrl + '/country_lang_map.json',
@@ -284,11 +278,11 @@ function cookies_disclosure_load() {
     crossDomain: true,
     cache: false
   }).done(function(data) {
-    var json = JSON.parse(data),
-        use_lang = 'en';
+    var json = JSON.parse(data);
+    var use_lang = lang || 'en';
 
-    if(json && lang && json[lang]) {
-      use_lang = json[lang];
+    if(json && json[use_lang]) {
+      use_lang = json[use_lang];
     }
     endUrl = baseUrl + '/' + use_lang + '/cookiesdisclosure-new.html';
 
@@ -315,23 +309,56 @@ function cookies_disclosure_load() {
   });
 }
 
+function sendToKV(hasAcceptedAll) {
+  setGdprCookie()
+  var today = new Date();
+  var day = today.toLocaleString('default', { day: 'numeric' });
+  var weekday = today.toLocaleString('default', { weekday: 'short' });
+  var month = today.toLocaleString('default', { month: 'short' });
+  var year = today.toLocaleString('default', { year: 'numeric' });
+  var time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+  var data = {
+    'url': window.location.href,
+    'key': gdprRecorder,
+    'dateTime': `${weekday} ${month} ${day} ${year} ${time}`,
+    'hasAcceptedAll': hasAcceptedAll
+  }
+  var settings = {
+    'cache': false,
+    'dataType': 'JSONP',
+    'jsonpCallback': 'callback',
+    'async': true,
+    'crossDomain': true,
+    'url': `${gdprUrl}/gdpr`,
+    'method': 'GET',
+    'headers': {
+      'accept': 'application/json',
+      'Access-Control-Allow-Origin':'*'
+    },
+    data: data,
+  }
+  $.ajax(settings)
+    .done(() => {
+      return true
+    }).fail(() => {
+      return false
+    })
+}
+
 function cookies_dialog_open_details() {
   var current_mode = {};
   if (typeof(cookie_consent_current) === 'function') {
     current_mode = cookie_consent_current();
   }
   current_mode['functional'] = true;
-
   $('input.cookie-consent-detail').each(function(){
-    $(this).attr("checked", current_mode[this.value] ? "checked" : null);
+    $(this).attr('checked', current_mode[this.value] ? 'checked' : null);
   });
 
   document.querySelector('.cookies-dialog-main').style = 'display: none';
   document.querySelector('.cookies-dialog-detail').style = 'display: block';
   document.querySelector('.cookies_policy_banner').classList.add('cookies_detail_open');
   //element. classList. add('class-1');
-  //to-cf
-  sendToKV('consentShow', 'prefsShow')
 }
 
 function cookie_consent_update(mode) {
@@ -348,7 +375,7 @@ function cookie_consent_update(mode) {
 }
 
 function cookies_dialog_done(mode) {
-  document.querySelector('.cookies_policy_banner').style = 'display: none;';
+  document.querySelector('div.cookies_policy_banner').style = 'display: none;';
   __udeals_cookie_first = false;
   if (mode === undefined || mode === null)
     mode = __udeals_cookie_consent_full;
@@ -357,8 +384,6 @@ function cookies_dialog_done(mode) {
   __udeals_cookie_consent_mode = mode;
   cookie_consent_update(mode);
   document.querySelector('div.cookies_policy_minimized').style = 'display: block';
-  //to-cf
-  sendToKV('consentShow', 'shieldShow')
 }
 
 function storeCookieConsent(value, exdays) {
@@ -377,84 +402,21 @@ function cookie_consent_current() {
   return __udeals_cookie_consent_mode;
 }
 
-function uGetCookie() {
-  return false
-}
-
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
+  var value = `; ${document.cookie}`;
+  var parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
-function checkShowedOption() {
-  const banner = document.querySelector('.cookies-dialog-main');
-  const shield = document.querySelector('.cookies_policy_minimized');
-  if (window.getComputedStyle(banner).display != "none") {
-    return 'modal'
+function checkAllTrue(udata) {
+  for(var key in udata) {
+    if(!udata[key]) return false;
   }
-  if (window.getComputedStyle(shield).display != "none") {
-    return 'shield'
-  }
-}
-
-function sendToKV(eventType, eventTarget) {
-  const udeals = getCookie('udeals');
-  const sessionCookie = getCookie('udeals_variation_uid');
-  const today = new Date();
-  const day = today.toLocaleString('default', { day: 'numeric' });
-  const weekday = today.toLocaleString('default', { weekday: 'short' });
-  const month = today.toLocaleString('default', { month: 'short' });
-  const year = today.toLocaleString('default', { year: 'numeric' });
-  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  const x = {
-    "dateTime": `${weekday} ${month} ${day} ${year} ${time}`,
-    "eventType": eventType,
-    "eventTarget": eventTarget
-  }
-
-  // fetch('http://127.0.0.1:8787/test', {
-  //   method: 'POST',
-  //   mode: 'no-cors',
-  //   cache: 'no-cache'
-  // })
-  // jQuery.postCORS = function(url, data, func) {
-  //   if(func == undefined) func = function(){};
-  //   return $.ajax({
-  //     type: 'POST',
-  //     url: url,
-  //     data: data,
-  //     dataType: 'json',
-  //     contentType: 'application/x-www-form-urlencoded',
-  //     xhrFields: { withCredentials: true },
-  //     success: function(res) { func(res) },
-  //     error: function() {
-  //             func({})
-  //     }
-  //   });
-  // }
-  // $.postCORS("http://127.0.0.1:8787/test",{ x : 1 },function(obj){
-  //     console.log(obj);
-  // });
-  $.ajax({
-    url: 'https://gdpr-consent-recorder.wemystic.workers.dev/test',
-    type: 'POST',
-    contentType: 'application/json',
-    headers: {
-      "accept": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
-    },
-    dataType: 'json',
-    data: { "cenas": "cenas" }
-  }).done(function(data) {
-    console.log(data);
-  });
+  return true;
 }
 
 $(function() {
-  var cookie_v = uGetCookie('udeals_cookies_policy');
+  var cookie_v = getCookie('udeals_cookies_policy');
   if (cookie_v) {
     try {
       var v = JSON.parse(cookie_v);
@@ -463,50 +425,39 @@ $(function() {
       __udeals_cookie_first = false;
       document.querySelector('.cookies_policy_banner').style = 'display: none';
       document.querySelector('.cookies_policy_minimized').style = 'display: block';
-      //to-cf
-      sendToKV('consentShow', 'shieldShow')
     } catch(e) {
-      //to-cf
-      sendToKV('consentShow', 'modalShow')
       cookies_disclosure_load();
     }
   } else {
-    //to-cf
-    sendToKV('consentShow', 'modalShow')
     cookies_disclosure_load();
   }
 
-  $(document).on('click', '.cookies-dialog-switch', function() {
-    //to-cf
-    sendToKV('consentClick', 'prefsOpen')
+  $(document).on('click', 'button.cookies-dialog-switch', function() {
     cookies_dialog_open_details();
   });
-  $(document).on('click', '.cookies-dialog-accept', function() {
-    //to-cf
-    sendToKV('consentClick', 'modalAccept')
-    if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(null);
+  $(document).on('click', 'button.cookies-dialog-accept', function() {
+    var udata = { 'functional': true, 'measurement': true, 'marketing': true };
+    if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(udata);
+    sendToKV(true)
   });
   $(document).on('click', 'button.cookies-dialog-accept-detail', function() {
-    //to-cf
-    sendToKV('consentClick', 'prefsAccept')
-    var udata = { 'marketing': false, 'measurement': false, 'functional': true };
+    var udata = { 'functional': true, 'measurement': false, 'marketing': false };
     $('div.cookies-dialog-detail').find('input.cookie-consent-detail:checked').each(function() {
       udata[this.value] = true;
     });
+    sendToKV(checkAllTrue(udata))
     if (typeof(cookies_dialog_done) === 'function') cookies_dialog_done(udata);
   });
 
   $(document).on('click', 'div.cookies_policy_minimized a', function(e) {
-    //to-cf
-    sendToKV('consentClick', 'shieldClick')
     e.preventDefault();
     document.querySelector('div.cookies_policy_minimized').style = 'display: none';
     cookies_disclosure_load();
+
     return false;
   });
 
   $(document).on('click', 'div.cookies_modal a.external_policy', function(e) {
-    console.log('here');
     e.preventDefault();
 
     document.querySelectorAll('div.cookies_modal > div').forEach(el => el.style = 'display: none');
@@ -543,11 +494,6 @@ $(function() {
     document.querySelectorAll('div.cookies_modal > div').forEach(el => el.style = 'display: none');
     document.querySelector((__udeals_cookie_first ? 'div.cookies-dialog-main' : 'div.cookies_policy_minimized')).style = 'display: block';
     document.querySelector('.cookies_policy_banner').classList.remove('cookies_detail_open');
-    //to-cf
-    sendToKV('consentClick', 'prefsClose')
-    const optionShown = checkShowedOption()
-    //to-cf
-    sendToKV('consentShow', `${optionShown}Show`)
   })
 });
 </script>
