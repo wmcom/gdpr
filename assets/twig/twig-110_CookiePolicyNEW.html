@@ -250,7 +250,7 @@ div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 var __udeals_cookie_consent_full = { 'functional': true, 'measurement': true, 'marketing': true };
 var __udeals_cookie_consent_mode = __udeals_cookie_consent_full;
 var __udeals_cookie_first = true;
-var udeals = cGetCookie('udeals');
+var udealsConsentCookie = cGetCookie('udeals');
 var sessionCookie = cGetCookie('udeals_variation_uid');
 var gdprRecorder = cGetCookie('gdpr_recorder');
 if (!gdprRecorder) {
@@ -260,7 +260,7 @@ if (!gdprRecorder) {
 function setGdprCookie() {
   const expirationDate = new Date();
   expirationDate.setMinutes(expirationDate.getMinutes() + 30);
-  document.cookie = `gdpr_recorder=${udeals}:${Date.now()}; expires=${expirationDate.toUTCString()}`;
+  document.cookie = `gdpr_recorder=${udealsConsentCookie}:${Date.now()}; expires=${expirationDate.toUTCString()}`;
   gdprRecorder = cGetCookie('gdpr_recorder');
 }
 
