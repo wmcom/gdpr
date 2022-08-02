@@ -434,7 +434,7 @@ function cGetCookie(name) {
   var value = `; ${document.cookie}`;
   var parts = value.split(`; ${name}=`);
   var cookiesArray = parts.pop().split(';').shift();
-  if (parts.length >= 1) return decodeURIComponent(cookiesArray);
+  if (parts.length > 0) return decodeURIComponent(cookiesArray);
 }
 
 function checkAllTrue(udata) {
