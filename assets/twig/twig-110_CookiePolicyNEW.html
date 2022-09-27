@@ -1,3 +1,8 @@
+<script>
+if(typeof lang === 'undefined') var lang = 'en';
+var variation_lang = '{{ landing.Lang }}';
+</script>
+
 <style>
 :root {
   --modal-bg-color: #ffffff;
@@ -237,13 +242,7 @@ div.cookies_policy_minimized a::after{top: 0 !important;}
 div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 </style>
 
-<div class="cookies_policy_banner" style="display: none;">
-  <div class="cookies_modal">
-    <span>{{ leadcentre.getInfo.getCookiesPolicy|raw }}</span>
-    <div class="cookies_policy_btn" role="button">OK</div>
-    <a href="#" onclick="window.open('{{ leadcentre.getPrivacyPolicyLink | replace({'http:':'https:'}) }}#cookies',null,'width=500,height=400,scrollbars=yes'); return false;">{{ "Learn More" | translate }}</a>
-  </div>
-</div>
+<div class="cookies_policy_banner" style="display: none;"><div class="cookies_modal"></div></div>
 <div class="cookies_policy_minimized" style="display: none;"><a>Cookies</a></div>
 
 <script>
@@ -256,6 +255,15 @@ var sessionCookie = cGetCookie('udeals_variation_uid');
 var gdprRecorder = cGetCookie('gdpr_recorder');
 if (!gdprRecorder) {
   setGdprCookie();
+}
+
+if(typeof cGetCookie === 'undefined') {
+  var cGetCookie = function(name) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${name}=`);
+    var cookiesArray = parts.pop().split(';').shift();
+    if (parts.length > 0) return decodeURIComponent(cookiesArray);
+  }
 }
 
 function jsonpCall() {
@@ -308,10 +316,9 @@ function cookies_disclosure_load() {
   }).done(function(data) {
     var json = JSON.parse(data),
         use_lang = 'en',
-        available_lang = ['de', 'en', 'es', 'fr', 'it', 'pt'],
-        variation_lang = '{{ landing.Lang }}';
+        available_lang = ['de', 'en', 'es', 'fr', 'it', 'pt'];
 
-    if(json && lang && json[lang]) use_lang = json[lang];
+    if(json && typeof lang !== 'undefined' && json[lang]) use_lang = json[lang];
     if(variation_lang !== '' && variation_lang !== use_lang && available_lang.includes(variation_lang) === true) use_lang = variation_lang;
 
     endUrl = baseUrl + '/' + use_lang + '/cookiesdisclosure-new.html';
@@ -399,7 +406,6 @@ function cookie_consent_update(mode) {
         'analytics_storage': m2 ? 'granted': 'denied',
         'personalization_storage': m3 ? 'granted': 'denied'
       };
-  gtag('consent', 'update', udata);
   dataLayer.push({'event': 'uDealsConsentUpdate'});
 }
 
@@ -411,6 +417,7 @@ function cookies_dialog_done(mode) {
 
   storeCookieConsent(JSON.stringify(mode), null);
   __udeals_cookie_consent_mode = mode;
+
   cookie_consent_update(mode);
   document.querySelector('div.cookies_policy_minimized').style = 'display: block';
 }
@@ -431,12 +438,6 @@ function cookie_consent_current() {
   return __udeals_cookie_consent_mode;
 }
 
-function cGetCookie(name) {
-  var value = `; ${document.cookie}`;
-  var parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
 function checkAllTrue(udata) {
   for(var key in udata) {
     if(!udata[key]) return false;
@@ -450,7 +451,6 @@ $(function() {
     try {
       var v = JSON.parse(cookie_v);
       __udeals_cookie_consent_mode = v;
-      cookie_consent_update(v);
       __udeals_cookie_first = false;
       document.querySelector('.cookies_policy_banner').style = 'display: none';
       document.querySelector('.cookies_policy_minimized').style = 'display: block';
