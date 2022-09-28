@@ -1,6 +1,15 @@
 <script>
 if(typeof lang === 'undefined') var lang = 'en';
 var variation_lang = '{{ landing.Lang }}';
+
+if(typeof cGetCookie === 'undefined') {
+  var cGetCookie = function(name) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${name}=`);
+    var cookiesArray = parts.pop().split(';').shift();
+    if (parts.length > 0) return decodeURIComponent(cookiesArray);
+  }
+}
 </script>
 
 <style>
@@ -255,15 +264,6 @@ var sessionCookie = cGetCookie('udeals_variation_uid');
 var gdprRecorder = cGetCookie('gdpr_recorder');
 if (!gdprRecorder) {
   setGdprCookie();
-}
-
-if(typeof cGetCookie === 'undefined') {
-  var cGetCookie = function(name) {
-    var value = `; ${document.cookie}`;
-    var parts = value.split(`; ${name}=`);
-    var cookiesArray = parts.pop().split(';').shift();
-    if (parts.length > 0) return decodeURIComponent(cookiesArray);
-  }
 }
 
 function jsonpCall() {
