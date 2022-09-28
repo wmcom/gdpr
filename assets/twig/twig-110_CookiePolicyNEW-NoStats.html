@@ -1,6 +1,15 @@
 <script>
 if(typeof lang === 'undefined') var lang = 'en';
 var variation_lang = '{{ landing.Lang }}';
+
+if(typeof cGetCookie === 'undefined') {
+  var cGetCookie = function(name) {
+    var value = `; ${document.cookie}`;
+    var parts = value.split(`; ${name}=`);
+    var cookiesArray = parts.pop().split(';').shift();
+    if (parts.length > 0) return decodeURIComponent(cookiesArray);
+  }
+}
 </script>
 
 <style>
@@ -249,15 +258,6 @@ div.cookies_policy_banner.cookies_detail_open{z-index: 1;}
 var __udeals_cookie_consent_full = { 'functional': true, 'measurement': true, 'marketing': true };
 var __udeals_cookie_consent_mode = __udeals_cookie_consent_full;
 var __udeals_cookie_first = true;
-
-if(typeof cGetCookie === 'undefined') {
-  var cGetCookie = function(name) {
-    var value = `; ${document.cookie}`;
-    var parts = value.split(`; ${name}=`);
-    var cookiesArray = parts.pop().split(';').shift();
-    if (parts.length > 0) return decodeURIComponent(cookiesArray);
-  }
-}
 
 function cookies_disclosure_load() {
   var baseUrl = 'https://legal.wemystic.net',
