@@ -467,23 +467,18 @@ function sendToKV(hasAcceptedAll) {
 
   fetch(url, {
     method: 'GET',
-    mode: 'cors',
+    mode: 'no-cors',
+    cache: 'no-cache',
     headers: {
       'Accept': 'application/json',
       'Access-Control-Allow-Origin': '*'
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      return true;
-    } else {
-      throw new Error('Failed to send data to KV');
     }
   })
   .catch(error => {
     console.error('Error:', error);
     return false;
   });
+
 }
 
 function cookies_dialog_open_details() {
