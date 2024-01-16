@@ -525,8 +525,8 @@ function cookie_consent_update(mode) {
         'ad_storage': m1 ? 'granted': 'denied',
         'analytics_storage': m2 ? 'granted': 'denied',
         'personalization_storage': m3 ? 'granted': 'denied',
-        'aduserdata_storage': m4 ? 'granted': 'denied',
-        'adpersonalization_storage': m5 ? 'granted': 'denied'
+        'ad_user_data': m4 ? 'granted': 'denied',
+        'ad_personalization': m5 ? 'granted': 'denied'
       };
   dataLayer.push({'event': 'uDealsConsentUpdate'});
 }
