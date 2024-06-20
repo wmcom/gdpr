@@ -1,0 +1,1262 @@
+[
+  {
+    "id": 3335,
+    "date": "2024-03-14T11:29:36",
+    "date_gmt": "2024-03-14T11:29:36",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=3335"
+    },
+    "modified": "2024-03-14T11:29:36",
+    "modified_gmt": "2024-03-14T11:29:36",
+    "slug": "wemystic-en-udeals-partners-chris-montra",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-en-udeals-partners-chris-montra/",
+    "title": {
+      "rendered": "WEMYSTIC EN uDeals Partners + Chris Montra"
+    },
+    "content": {
+      "rendered": "\n<p>I accept the <a href=\"/legal/termsandconditions/udeals-wemystic-en-chris-montra\">Terms and Conditions</a> and the <a href=\"/legal/privacypolicy/udeals-wemystic-en-chris-montra\">Privacy Policy</a> of the site.<br />I agree to receive newsletters and offers from this site by email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/3335"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/3335/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 3337,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/3335/revisions/3337"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=3335"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 2682,
+    "date": "2021-03-12T12:23:28",
+    "date_gmt": "2021-03-12T12:23:28",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=2682"
+    },
+    "modified": "2021-03-12T12:23:28",
+    "modified_gmt": "2021-03-12T12:23:28",
+    "slug": "wemystic-fr-udeals-partners-cosmo",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-fr-udeals-partners-cosmo/",
+    "title": {
+      "rendered": "WEMYSTIC FR uDeals Partners + Cosmospace"
+    },
+    "content": {
+      "rendered": "\n<p>J&#8217;accepte de recevoir par email des offres de voyances <a href=\"/legal/termsandconditions/udeals-wemystic-frcosmospace\">des partenaires</a> de ce site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2682"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2682/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 2684,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2682/revisions/2684"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=2682"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 2681,
+    "date": "2021-03-12T12:23:26",
+    "date_gmt": "2021-03-12T12:23:26",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=2681"
+    },
+    "modified": "2021-03-12T12:23:26",
+    "modified_gmt": "2021-03-12T12:23:26",
+    "slug": "wemystic-en-udeals-partners-telemac",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-en-udeals-partners-telemac/",
+    "title": {
+      "rendered": "WEMYSTIC EN uDeals Partners + Telemac"
+    },
+    "content": {
+      "rendered": "\n<p>I agree to receive email offers from <a href=\"/legal/termsandconditions/udeals-wemystic-en-telemac\">the partners</a> of this site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2681"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2681/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 3336,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/2681/revisions/3336"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=2681"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1325,
+    "date": "2018-12-04T11:22:00",
+    "date_gmt": "2018-12-04T11:22:00",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=1325"
+    },
+    "modified": "2018-12-04T11:22:00",
+    "modified_gmt": "2018-12-04T11:22:00",
+    "slug": "wemystic-adc-fr-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-adc-fr-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC-ADC FR uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte les <a href=\"/legal/termsandconditions/udeals-nikita-adc-fr\">Termes et Conditions</a> et la <a href=\"/legal/privacypolicy/udeals-nikita-adc-fr\">Politique de Confidentialité</a> du site.<br />\nJ&#8217;accepte de recevoir des newsletters et des offres de ce site par email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1325"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1325/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1346,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1325/revisions/1346"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=1325"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1324,
+    "date": "2018-12-04T11:17:50",
+    "date_gmt": "2018-12-04T11:17:50",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=1324"
+    },
+    "modified": "2018-12-04T11:18:41",
+    "modified_gmt": "2018-12-04T11:18:41",
+    "slug": "wemystic-adc-en-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-adc-en-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC-ADC EN uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>I accept the <a href=\"/legal/termsandconditions/udeals-nikita-adc-en\">Terms and Conditions</a> and the <a href=\"/legal/privacypolicy/udeals-nikita-adc-en\">Privacy Policy</a> of the site.<br />\nI agree to receive newsletters and offers from this site by email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1324"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1324/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1345,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1324/revisions/1345"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=1324"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1327,
+    "date": "2018-12-04T11:17:02",
+    "date_gmt": "2018-12-04T11:17:02",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=1327"
+    },
+    "modified": "2018-12-04T11:23:11",
+    "modified_gmt": "2018-12-04T11:23:11",
+    "slug": "wemystic-adc-fr-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-adc-fr-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC-ADC FR uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte de recevoir par email des offres de voyances <a href=\"/legal/termsandconditions/udeals-nikita-adc-fr-partners\">des partenaires</a> de ce site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1327"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1327/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1348,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1327/revisions/1348"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=1327"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1326,
+    "date": "2018-12-04T11:16:35",
+    "date_gmt": "2018-12-04T11:16:35",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=1326"
+    },
+    "modified": "2018-12-04T11:23:00",
+    "modified_gmt": "2018-12-04T11:23:00",
+    "slug": "wemystic-adc-en-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-adc-en-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC-ADC EN uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>I agree to receive email offers from <a href=\"/legal/termsandconditions/udeals-nikita-adc-en-partners\">the partners</a> of this site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1326"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 3,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1326/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1347,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/1326/revisions/1347"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=1326"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 766,
+    "date": "2018-05-24T00:36:02",
+    "date_gmt": "2018-05-23T23:36:02",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=766"
+    },
+    "modified": "2019-08-21T11:28:49",
+    "modified_gmt": "2019-08-21T10:28:49",
+    "slug": "wemystic-pt-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-pt-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC PT uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>Aceito receber por email ofertas de vidências <a href=\"/legal/termsandconditions/udeals-wemystic-pt-partners\">dos parceiros</a> deste site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/766"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/766/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1679,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/766/revisions/1679"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=766"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 764,
+    "date": "2018-05-24T00:35:05",
+    "date_gmt": "2018-05-23T23:35:05",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=764"
+    },
+    "modified": "2019-08-21T11:28:52",
+    "modified_gmt": "2019-08-21T10:28:52",
+    "slug": "wemystic-it-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-it-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC IT uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>Accetto di ricevere offerte email <a href=\"/legal/termsandconditions/udeals-wemystic-it-partners\">dai partner</a> di questo sito.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/764"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/764/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1680,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/764/revisions/1680"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=764"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 762,
+    "date": "2018-05-24T00:34:34",
+    "date_gmt": "2018-05-23T23:34:34",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=762"
+    },
+    "modified": "2019-08-21T11:28:54",
+    "modified_gmt": "2019-08-21T10:28:54",
+    "slug": "wemystic-fr-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-fr-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC FR uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte de recevoir par email des offres de voyances <a href=\"/legal/termsandconditions/udeals-wemystic-fr-partners\">des partenaires</a> de ce site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/762"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/762/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1681,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/762/revisions/1681"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=762"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 760,
+    "date": "2018-05-24T00:33:57",
+    "date_gmt": "2018-05-23T23:33:57",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=760"
+    },
+    "modified": "2019-08-21T11:28:56",
+    "modified_gmt": "2019-08-21T10:28:56",
+    "slug": "wemystic-es-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-es-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC ES uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>Estoy de acuerdo en recibir ofertas <a href=\"/legal/termsandconditions/udeals-wemystic-es-partners\">de socios</a> de videncias de este sitio web por correo electrónico.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/760"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/760/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1682,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/760/revisions/1682"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=760"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 758,
+    "date": "2018-05-24T00:33:08",
+    "date_gmt": "2018-05-23T23:33:08",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=758"
+    },
+    "modified": "2019-08-21T11:28:59",
+    "modified_gmt": "2019-08-21T10:28:59",
+    "slug": "wemystic-en-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-en-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC EN uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>I agree to receive email offers from <a href=\"/legal/termsandconditions/udeals-wemystic-en-partners\">the partners</a> of this site.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/758"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/758/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1683,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/758/revisions/1683"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=758"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 755,
+    "date": "2018-05-24T00:23:31",
+    "date_gmt": "2018-05-23T23:23:31",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=755"
+    },
+    "modified": "2019-08-21T11:29:01",
+    "modified_gmt": "2019-08-21T10:29:01",
+    "slug": "wemystic-de-udeals-partners",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-de-udeals-partners/",
+    "title": {
+      "rendered": "WEMYSTIC DE uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>Ich bin damit einverstanden, per E-Mail Angebote für Hellsehungen <a href=\"/legal/termsandconditions/udeals-wemystic-de-partners\">von Partnern</a> zu erhalten.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/755"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/755/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1684,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/755/revisions/1684"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=755"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 723,
+    "date": "2018-05-24T00:00:47",
+    "date_gmt": "2018-05-23T23:00:47",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=723"
+    },
+    "modified": "2019-08-21T11:29:03",
+    "modified_gmt": "2019-08-21T10:29:03",
+    "slug": "wemystic-de-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-de-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC DE uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>Ich akzeptiere die <a href=\"/legal/termsandconditions/udeals-wemystic-de\">AGB</a> und die <a href=\"/legal/privacypolicy/udeals-wemystic-de\">Datenschutzbestimmung</a> der Webseite.<br />\nIch bin damit einverstanden, per E-Mail Newsletter und Angebote von dieser Seite zu erhalten.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/723"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/723/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1685,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/723/revisions/1685"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=723"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 721,
+    "date": "2018-05-23T23:58:38",
+    "date_gmt": "2018-05-23T22:58:38",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=721"
+    },
+    "modified": "2019-08-21T11:29:06",
+    "modified_gmt": "2019-08-21T10:29:06",
+    "slug": "wemystic-en-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-en-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC EN uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>I accept the <a href=\"/legal/termsandconditions/udeals-wemystic-en\">Terms and Conditions</a> and the <a href=\"/legal/privacypolicy/udeals-wemystic-en\">Privacy Policy</a> of the site.<br />\nI agree to receive newsletters and offers from this site by email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/721"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/721/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1686,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/721/revisions/1686"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=721"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 719,
+    "date": "2018-05-23T23:57:39",
+    "date_gmt": "2018-05-23T22:57:39",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=719"
+    },
+    "modified": "2019-08-21T11:29:11",
+    "modified_gmt": "2019-08-21T10:29:11",
+    "slug": "wemystic-es-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-es-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC ES uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>Acepto los <a href=\"/legal/termsandconditions/udeals-wemystic-es\">Términos y Condiciones</a> y la <a href=\"/legal/privacypolicy/udeals-wemystic-es\">Política de Privacidad</a> del sitio web.<br />\nAcepto recibir newsletters y ofertas de este sitio por correo electrónico.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/719"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/719/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1687,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/719/revisions/1687"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=719"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 717,
+    "date": "2018-05-23T23:55:52",
+    "date_gmt": "2018-05-23T22:55:52",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=717"
+    },
+    "modified": "2019-08-21T11:29:13",
+    "modified_gmt": "2019-08-21T10:29:13",
+    "slug": "wemystic-fr-udeals-doublesens",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-fr-udeals-doublesens/",
+    "title": {
+      "rendered": "WEMYSTIC FR uDeals +DoubleSens REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte les <a href=\"/legal/termsandconditions/udeals-wemystic-frdoublesens\">Termes et Conditions</a> et la <a href=\"/legal/privacypolicy/udeals-wemystic-fr\">Politique de Confidentialité</a> du site.<br />\nJ&#8217;accepte de recevoir des newsletters et des offres de ce site par email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/717"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/717/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1688,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/717/revisions/1688"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=717"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 715,
+    "date": "2018-05-23T23:52:38",
+    "date_gmt": "2018-05-23T22:52:38",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=715"
+    },
+    "modified": "2019-08-21T11:29:16",
+    "modified_gmt": "2019-08-21T10:29:16",
+    "slug": "wemystic-fr-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-fr-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC FR uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte les <a href=\"/legal/termsandconditions/udeals-wemystic-fr\">Termes et Conditions</a> et la <a href=\"/legal/privacypolicy/udeals-wemystic-fr\">Politique de Confidentialité</a> du site.<br />\nJ&#8217;accepte de recevoir des newsletters et des offres de ce site par email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/715"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/715/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1689,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/715/revisions/1689"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=715"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 701,
+    "date": "2018-05-23T23:51:30",
+    "date_gmt": "2018-05-23T22:51:30",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=701"
+    },
+    "modified": "2019-08-21T11:29:18",
+    "modified_gmt": "2019-08-21T10:29:18",
+    "slug": "wemystic-it-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-it-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC IT uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>Accetto i <a href=\"/legal/termsandconditions/udeals-wemystic-it\">Termini e Condizioni</a> e <a href=\"/legal/privacypolicy/udeals-wemystic-it\">l&#8217;informativa sulla privacy</a> del sito.<br />\nAccetto di ricevere la newsletter delle offerte di questo sito via e-mail.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/701"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 6,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/701/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1690,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/701/revisions/1690"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=701"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 699,
+    "date": "2018-05-23T23:47:45",
+    "date_gmt": "2018-05-23T22:47:45",
+    "guid": {
+      "rendered": "https://legal.adc-corp.eu/?post_type=disclosure&#038;p=699"
+    },
+    "modified": "2019-08-21T11:29:19",
+    "modified_gmt": "2019-08-21T10:29:19",
+    "slug": "wemystic-pt-udeals",
+    "status": "publish",
+    "type": "disclosure",
+    "link": "https://legal.adc-corp.eu/disclosure/wemystic-pt-udeals/",
+    "title": {
+      "rendered": "WEMYSTIC PT uDeals REVER"
+    },
+    "content": {
+      "rendered": "<p>Aceito os <a href=\"/legal/termsandconditions/udeals-wemystic-pt\">Termos e Condições</a> e <a href=\"/legal/privacypolicy/udeals-wemystic-pt\">Política de Privacidade</a> do site.<br />\nAceito receber newsletters e ofertas deste site por email.</p>\n",
+      "protected": false
+    },
+    "template": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/699"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/types/disclosure"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/699/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1691,
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/disclosure/699/revisions/1691"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://legal.adc-corp.eu/wp-json/wp/v2/media?parent=699"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
