@@ -10,7 +10,7 @@
 	  }
   ],
   "tc": {
-    "url": "https://legal.wemystic.net/pt/termsandconditions.json"
+    "url": "https://legal.wemystic.net/legal/pt/termsandconditions/udeals-wemystic-pt.json"
   },
   "contacts": {
     "body": "<h2>Contatos</h2><p>Pode entrar em contacto conosco através do email: <a href=\"mailto:info@wemystic.com\">info@wemystic.com</a> ou <a href=\"mailto:info@wemystic.com.br\">info@wemystic.com.br</a>.</p>"
