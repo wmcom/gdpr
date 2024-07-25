@@ -1,18 +1,18 @@
-<div id="cookies-dialog-main" class="cookies-dialog-main" role="dialog" open>
+<div id="consent-dialog-main" class="consent-dialog-main" role="dialog">
   <h4>Cookies management</h4>
   <span>
     This website uses necessary, analytical and advertising cookies to improve the user's browsing experience, display ads of interest and compile statistical data. To allow the use of all types of cookies click on <strong>Accept</strong>. If you want to choose just a few, click on <strong>Settings</strong>.
     You can get more information about how we use cookies in the <a href="/legal/en/cookiespolicy" onclick="return false" class="external_policy">WeMystic Cookie Policy</a>
     and how your data may be used for personalization of ads on <a href="https://business.safety.google/privacy/" target="_blank">Google's Privacy & Terms</a>.
   </span>
-  <button type="button" class="cookies-dialog-switch" role="button">
+  <button type="button" class="consent-dialog-switch" role="button">
     <span>Settings</span>
   </button>
-  <button type="button" class="cookies-dialog-accept" role="button">
+  <button type="button" class="consent-dialog-accept" role="button">
     <span>Accept</span>
   </button>
 </div>
-<div id="cookies-dialog-detail" class="cookies-dialog-detail" role="dialog" hidden>
+<div id="consent-dialog-detail" class="consent-dialog-detail" role="dialog" hidden>
   <h4>Cookies settings</h4>
   <div>
     <label>
@@ -105,35 +105,10 @@
     You can get more information about how we use cookies in the <a href="/legal/en/cookiespolicy" onclick="return false" class="external_policy">WeMystic Cookie Policy</a>
     and how your data may be used for personalization of ads on <a href="https://business.safety.google/privacy/" target="_blank">Google's Privacy & Terms</a>.
   </p>
-  <button type="button" class="cookies-dialog-accept-detail" role="button">
+  <button type="button" class="consent-dialog-accept-detail" role="button">
     <span>Accept</span>
   </button>
-  <button type="button" class="cookies-dialog-accept" role="button">
+  <button type="button" class="consent-dialog-accept" role="button">
     <span>Accept all</span>
   </button>
-  <style>
-  /* temp fix */
-  /*
-  div.cookies_policy_banner.cookies_detail_open {
-    align-items: flex-start !important;
-    overflow: auto !important;
-  }
-  div.cookies_policy_banner button.cookies-dialog-accept-detail {
-    background-color: var(--btn-bg-color) !important;
-    border: 1px solid var(--btn-border-color) !important;
-    color: var(--btn-text-color) !important;
-  }
-  div.cookies_policy_banner button:hover {
-    background-color: var(--btn-bg-hover) !important;
-    border-color: var(--btn-border-color-hover) !important;
-  }
-  */
-  details {
-    margin-bottom: 20px;
-  }
-  details > summary {
-    display: list-item;
-    cursor: pointer;
-  }
-  </style>
 </div>
