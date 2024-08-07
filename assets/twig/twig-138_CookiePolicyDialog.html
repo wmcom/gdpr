@@ -69,7 +69,7 @@ function consent_disclosure_load() {
     let show_lang = document.querySelector('html').getAttribute('lang').split('-').shift();
 
     const lp_lang = '{{general.best_language}}';
-    if(lp_lang !== '') show_lang = lp_lang;
+    if(lp_lang !== '' && lp_lang !== '{{general.best_language}}') show_lang = lp_lang;
 
     if(show_lang !== use_lang
     && available_lang.includes(show_lang) === true)
