@@ -80,6 +80,26 @@
     }
   },
   {
+    "id": 257661,
+    "slug": "wemystic-data-pt-udeals-partners",
+    "title": {
+      "rendered": "WEMYSTIC DATA PT uDeals Partners REVER"
+    },
+    "content": {
+      "rendered": "<p>Aceito receber por email ofertas <a href=\"/legal/pt/termsandconditions/udeals-data-pt-partners\">dos parceiros</a> deste site.</p>\n"
+    }
+  },
+  {
+    "id": 257662,
+    "slug": "wemystic-data-pt-udeals-partners-phone",
+    "title": {
+      "rendered": "WEMYSTIC DATA PT uDeals Partners Phone REVER"
+    },
+    "content": {
+      "rendered": "<p>Aceito receber por telefone e SMS ofertas <a href=\"/legal/pt/termsandconditions/udeals-data-pt-partners-phone\">dos parceiros</a> deste site.</p>\n"
+    }
+  },
+  {
     "id": 764,
     "slug": "wemystic-it-udeals-partners",
     "title": {
@@ -100,6 +120,16 @@
     }
   },
   {
+    "id": 257622,
+    "slug": "wemystic-fr-udeals-partners-phone",
+    "title": {
+      "rendered": "WEMYSTIC FR uDeals Partners Phone REVER"
+    },
+    "content": {
+      "rendered": "<p>J&#8217;accepte de recevoir par téléphone et SMS des offres <a href=\"/legal/fr/termsandconditions/udeals-wemystic-fr-partners-phone\">des partenaires</a> de ce site.</p>\n"
+    }
+  },
+  {
     "id": 760,
     "slug": "wemystic-es-udeals-partners",
     "title": {
@@ -116,7 +146,17 @@
       "rendered": "WEMYSTIC EN uDeals Partners REVER"
     },
     "content": {
-      "rendered": "<p>I agree to receive email and SMS offers from <a href=\"/legal/en/termsandconditions/udeals-wemystic-en-partners\">the partners</a> of this site.</p>\n"
+      "rendered": "<p>I agree to receive email offers from <a href=\"/legal/en/termsandconditions/udeals-wemystic-en-partners\">the partners</a> of this site.</p>\n"
+    }
+  },
+  {
+    "id": 257582,
+    "slug": "wemystic-en-udeals-partners-phone",
+    "title": {
+      "rendered": "WEMYSTIC EN uDeals Partners Phone REVER"
+    },
+    "content": {
+      "rendered": "<p>I agree to receive phone and SMS offers from <a href=\"/legal/en/termsandconditions/udeals-wemystic-en-partners-phone\">the partners</a> of this site.</p>\n"
     }
   },
   {
@@ -200,3 +240,4 @@
     }
   }
 ]
+
